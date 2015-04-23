@@ -109,7 +109,6 @@
 		18DB645B1A66AF9900D5D852 /* GameFramework */ = {
 			isa = PBXGroup;
 			children = (
-				18DB64F91A68E11300D5D852 /* Podfile */,
 				18EDFDD11A68E5CC00B7F59C /* GameFramework.xcdatamodeld */,
 				18DB64F31A68C19700D5D852 /* Constants.swift */,
 				18DB645E1A66AF9900D5D852 /* AppDelegate.swift */,
@@ -129,6 +128,7 @@
 		18DB645C1A66AF9900D5D852 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18DB64F91A68E11300D5D852 /* Podfile */,
 				18EDFDCF1A68E42300B7F59C /* GameFramework-Bridging-Header.h */,
 				18DB64821A66B87C00D5D852 /* Sounds */,
 				18DB64851A66B87C00D5D852 /* sprites.atlas */,
