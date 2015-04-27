@@ -1,14 +1,14 @@
 //
-//  MainViewController.swift
+//  MainMenuViewController.swift
 //  GameFramework
 //
-//  Created by maheshbabu.somineni on 4/27/15.
+//  Created by apple on 4/27/15.
 //  Copyright (c) 2015 apple. All rights reserved.
 //
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainMenuViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,24 +32,20 @@ class MainViewController: UIViewController {
     }
     */
 
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        
-        return 1
+    // MARK: - Button click methods
+    @IBAction func scoreboardButtonClick(sender: UIButton) {
         
     }
-
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+    @IBAction func statisticsButtonClick(sender: UIButton) {
         
-        return 10
     }
-    
-    
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+    @IBAction func settingsButtonClick(sender: UIButton) {
         
-        let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
+    }
+    @IBAction func tutorialButtonClick(sender: UIButton) {
         
-        cell.textLabel.text = "asdfasdf"
-        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
-        return cell
+    }
+    @IBAction func aboutusButtonClick(sender: UIButton) {
+        
     }
 }
