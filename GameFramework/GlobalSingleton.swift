@@ -32,7 +32,7 @@ class GlobalSingleton {
             if(appItertationNumber==0){
                 
                 GlobalSettings.addUserDefaults()
-                GlobalSettings.addGameLevels()
+                //GlobalSettings.addGameLevels()
                 
             }
         }

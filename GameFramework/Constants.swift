@@ -17,5 +17,8 @@ struct GlobalVariables {
     static let user_defaults_app_purchased_flag_key = "is_app_purchased"
     static let user_defaults_level_objects_array_key = "level_objects_array"
     static let user_defaults_current_level_key = "current_level"
+    static let user_defaults_category_id_key = "category_id"
+    static let user_defaults_budget_id_key = "budget_id"
+
     
 }

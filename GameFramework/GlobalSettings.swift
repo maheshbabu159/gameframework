@@ -49,7 +49,6 @@ class GlobalSettings {
 
         
         //Adding levels to array
-
         let level4 = LevelsEntity.createEntity() as LevelsEntity
         level4.level_number = level4NumberIntValue
         level4.level_target_score_number = level4TargetScoreIntValue
@@ -66,10 +65,7 @@ class GlobalSettings {
         level1.level_number = level1NumberIntValue
         level1.level_target_score_number = level1TargetScoreIntValue
         
-    
-        
         NSManagedObjectContext.defaultContext().saveToPersistentStoreAndWait()
-        
         
     }
     
