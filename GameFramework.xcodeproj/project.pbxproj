@@ -14,6 +14,7 @@
 		183AA34B1A68F68000EAE7B5 /* LevelsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183AA34A1A68F68000EAE7B5 /* LevelsEntity.swift */; };
 		18BD54C01AEE967F002BB1AB /* Main_Rugby.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BD54BF1AEE967F002BB1AB /* Main_Rugby.storyboard */; };
 		18BD54C31AEE9D15002BB1AB /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD54C21AEE9D15002BB1AB /* MainMenuViewController.swift */; };
+		18BD54C51AEEA3EF002BB1AB /* ScoreboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD54C41AEEA3EF002BB1AB /* ScoreboardViewController.swift */; };
 		18DB645F1A66AF9900D5D852 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DB645E1A66AF9900D5D852 /* AppDelegate.swift */; };
 		18DB646A1A66AF9900D5D852 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DB64691A66AF9900D5D852 /* Images.xcassets */; };
 		18DB646D1A66AF9900D5D852 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DB646B1A66AF9900D5D852 /* LaunchScreen.xib */; };
@@ -45,6 +46,7 @@
 		183AA34A1A68F68000EAE7B5 /* LevelsEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelsEntity.swift; sourceTree = "<group>"; };
 		18BD54BF1AEE967F002BB1AB /* Main_Rugby.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_Rugby.storyboard; sourceTree = "<group>"; };
 		18BD54C21AEE9D15002BB1AB /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		18BD54C41AEEA3EF002BB1AB /* ScoreboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreboardViewController.swift; sourceTree = "<group>"; };
 		18DB64591A66AF9900D5D852 /* GameFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DB645D1A66AF9900D5D852 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18DB645E1A66AF9900D5D852 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				18BD54C21AEE9D15002BB1AB /* MainMenuViewController.swift */,
+				18BD54C41AEEA3EF002BB1AB /* ScoreboardViewController.swift */,
 			);
 			name = Rugby;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				18DB64F41A68C19700D5D852 /* Constants.swift in Sources */,
 				183AA34B1A68F68000EAE7B5 /* LevelsEntity.swift in Sources */,
 				18BD54C31AEE9D15002BB1AB /* MainMenuViewController.swift in Sources */,
+				18BD54C51AEEA3EF002BB1AB /* ScoreboardViewController.swift in Sources */,
 				0EDA99F71AEE47FC00BECB9E /* BudgetEntity.swift in Sources */,
 				18DB648E1A66D5E700D5D852 /* GlobalSingleton.swift in Sources */,
 				18DB645F1A66AF9900D5D852 /* AppDelegate.swift in Sources */,
