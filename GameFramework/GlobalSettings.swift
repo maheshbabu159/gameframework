@@ -26,10 +26,14 @@ class GlobalSettings {
         
         GlobalVariables.globalUserDefaults.setInteger(0, forKey: GlobalVariables.user_defaults_app_iteration_number_key)
         
-        GlobalVariables.globalUserDefaults.setBool(false, forKey: GlobalVariables.user_defaults_app_iteration_number_key)
+        GlobalVariables.globalUserDefaults.setBool(false, forKey: GlobalVariables.user_defaults_app_purchased_flag_key)
         
-        GlobalVariables.globalUserDefaults.setInteger(0,forKey:GlobalVariables.user_defaults_current_level_key)
-        
+        GlobalVariables.globalUserDefaults.setInteger(0,forKey:GlobalVariables.user_defaults_match_id_key)
+     
+        GlobalVariables.globalUserDefaults.setInteger(0,forKey:GlobalVariables.user_defaults_location_id_key)
+
+        GlobalVariables.globalUserDefaults.setInteger(0,forKey:GlobalVariables.user_defaults_tournment_id_key)
+
         NSUserDefaults.standardUserDefaults().synchronize()
 
 
