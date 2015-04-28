@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6254" systemVersion="14B25" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="13F34" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="BudgetEntity" representedClassName="BudgetEntity" syncable="YES">
         <attribute name="amount" optional="YES" attributeType="Double" defaultValueString="0.0" syncable="YES"/>
         <attribute name="budget_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
@@ -20,9 +20,27 @@
         <attribute name="level_time_min" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
         <attribute name="level_time_sec" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
     </entity>
+    <entity name="MatchEntity" representedClassName="MatchEntity" syncable="YES">
+        <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="guest_team_conversations" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="guest_team_filed_goals" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="guest_team_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="guest_team_penalties" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="guest_team_total_points" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="home_team_conversations" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="home_team_filed_goals" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="home_team_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="home_team_penalties" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="home_team_total_points" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="home_team_tries" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="match_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="tournment" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
-        <element name="LevelsEntity" positionX="-18" positionY="27" width="128" height="120"/>
-        <element name="CategoryEntity" positionX="-18" positionY="63" width="128" height="88"/>
         <element name="BudgetEntity" positionX="-9" positionY="72" width="128" height="133"/>
+        <element name="CategoryEntity" positionX="-18" positionY="63" width="128" height="88"/>
+        <element name="LevelsEntity" positionX="-18" positionY="27" width="128" height="120"/>
+        <element name="MatchEntity" positionX="-9" positionY="90" width="128" height="270"/>
     </elements>
 </model>

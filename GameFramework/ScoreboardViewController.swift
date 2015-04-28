@@ -8,6 +8,24 @@
 
 import UIKit
 
+let kButtonStartingTagt:Int = 2000
+
+var kButtonEndingTag: Int = 2009
+
+enum ButtonTags: Int {
+   
+    // enumeration definition goes here
+    case kHomeTriesButtonTag = 2000
+    case kGuestTriesButtonTag = 2001
+
+}
+
+enum BBPhoto1: Int {
+    case kommunen = 10
+    case sagsbehandler = 20
+    case festen = 30
+}
+
 class ScoreboardViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -15,6 +33,18 @@ class ScoreboardViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.navigationController?.navigationBarHidden = true
+        
+        
+        //Adding target progamatically for a button
+        for var index = kButtonStartingTagt; index < kButtonEndingTag; ++index {
+            
+            var button : UIButton = self.view.viewWithTag(index) as UIButton
+            
+            button.addTarget(self, action: "commonButtonClick:", forControlEvents: UIControlEvents.TouchUpInside)
+
+        }
+        
+        
 
     }
 
@@ -33,5 +63,64 @@ class ScoreboardViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    // MARK: - Button click methods
+    @IBAction func commonButtonClick(sender: UIButton) {
+        
+        
+        var buttonTag : ButtonTags?
+        
+        buttonTag = ButtonTags(rawValue: (sender as UIButton).tag)!
+        
+        if let buttonTag = buttonTag{
+            
+            switch (buttonTag) {
+                
+            case .kHomeTriesButtonTag:
+                
+                updateScores(ButtonTags.kHomeTriesButtonTag)
+                
+            case .kGuestTriesButtonTag:
+              
+                println("2001")
+                
+            default:
+                
+                println("none")
+            }
+            
+        }
 
+    }
+    
+    //MARK: Score update  methods
+    func updateScores(enumValue : ButtonTags){
+    
+        var buttonTag : ButtonTags?
+        
+        buttonTag = enumValue
+
+        if let buttonTag = buttonTag{
+            
+            switch (buttonTag) {
+                
+            case .kHomeTriesButtonTag:
+                
+                var button : UIButton = self.view.viewWithTag(Int(ButtonTags.kHomeTriesButtonTag.rawValue)) as UIButton
+
+                button.setTitle("1", forState: UIControlState.Normal)
+                
+            case .kGuestTriesButtonTag:
+                
+                println("2001")
+                
+            default:
+                
+                println("none")
+            }
+            
+        }
+
+        
+    }
+   
 }
