@@ -48,7 +48,7 @@ class MainViewController: UIViewController {
         
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
         
-        cell.textLabel.text = "asdfasdf"
+        cell.textLabel?.text = "asdfasdf"
         cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         return cell
     }

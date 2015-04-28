@@ -19,6 +19,9 @@ struct GlobalVariables {
     static let user_defaults_current_level_key = "current_level"
     static let user_defaults_category_id_key = "category_id"
     static let user_defaults_budget_id_key = "budget_id"
+    static let user_defaults_match_id_key = "match_id"
+    static let user_defaults_tournment_id_key = "tournment_id"
+    static let user_defaults_location_id_key = "location_id"
 
     
 }

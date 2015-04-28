@@ -11,6 +11,7 @@
 		0EDA99F51AEE165500BECB9E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA99F41AEE165500BECB9E /* MainViewController.swift */; };
 		0EDA99F71AEE47FC00BECB9E /* BudgetEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA99F61AEE47FC00BECB9E /* BudgetEntity.swift */; };
 		0EDA99F91AEE47FD00BECB9E /* CategoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA99F81AEE47FD00BECB9E /* CategoryEntity.swift */; };
+		0EDD2EFB1AEF8A62007E0CEB /* UMatchEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDD2EFA1AEF8A62007E0CEB /* UMatchEntity.swift */; };
 		183AA34B1A68F68000EAE7B5 /* LevelsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183AA34A1A68F68000EAE7B5 /* LevelsEntity.swift */; };
 		18BD54C01AEE967F002BB1AB /* Main_Rugby.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BD54BF1AEE967F002BB1AB /* Main_Rugby.storyboard */; };
 		18BD54C31AEE9D15002BB1AB /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BD54C21AEE9D15002BB1AB /* MainMenuViewController.swift */; };
@@ -44,6 +45,7 @@
 		0EDA99F41AEE165500BECB9E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0EDA99F61AEE47FC00BECB9E /* BudgetEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetEntity.swift; sourceTree = "<group>"; };
 		0EDA99F81AEE47FD00BECB9E /* CategoryEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryEntity.swift; sourceTree = "<group>"; };
+		0EDD2EFA1AEF8A62007E0CEB /* UMatchEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UMatchEntity.swift; sourceTree = "<group>"; };
 		183AA34A1A68F68000EAE7B5 /* LevelsEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelsEntity.swift; sourceTree = "<group>"; };
 		18BD54BF1AEE967F002BB1AB /* Main_Rugby.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_Rugby.storyboard; sourceTree = "<group>"; };
 		18BD54C21AEE9D15002BB1AB /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0EDD2EF81AEF888A007E0CEB /* UManaged */ = {
+			isa = PBXGroup;
+			children = (
+				0EDD2EFA1AEF8A62007E0CEB /* UMatchEntity.swift */,
+			);
+			name = UManaged;
+			sourceTree = "<group>";
+		};
+		0EDD2EF91AEF8893007E0CEB /* Managed */ = {
+			isa = PBXGroup;
+			children = (
+				18D4B4F51AEF159F003558F5 /* MatchEntity.swift */,
+				0EDA99F81AEE47FD00BECB9E /* CategoryEntity.swift */,
+				0EDA99F61AEE47FC00BECB9E /* BudgetEntity.swift */,
+				183AA34A1A68F68000EAE7B5 /* LevelsEntity.swift */,
+			);
+			name = Managed;
+			sourceTree = "<group>";
+		};
 		18BD54C11AEE9CE5002BB1AB /* Rugby */ = {
 			isa = PBXGroup;
 			children = (
@@ -183,10 +204,8 @@
 		18DB64F01A68C09100D5D852 /* DataObjects */ = {
 			isa = PBXGroup;
 			children = (
-				18D4B4F51AEF159F003558F5 /* MatchEntity.swift */,
-				0EDA99F81AEE47FD00BECB9E /* CategoryEntity.swift */,
-				0EDA99F61AEE47FC00BECB9E /* BudgetEntity.swift */,
-				183AA34A1A68F68000EAE7B5 /* LevelsEntity.swift */,
+				0EDD2EF91AEF8893007E0CEB /* Managed */,
+				0EDD2EF81AEF888A007E0CEB /* UManaged */,
 			);
 			name = DataObjects;
 			sourceTree = "<group>";
@@ -357,6 +376,7 @@
 			files = (
 				0EDA99F51AEE165500BECB9E /* MainViewController.swift in Sources */,
 				0EDA99F91AEE47FD00BECB9E /* CategoryEntity.swift in Sources */,
+				0EDD2EFB1AEF8A62007E0CEB /* UMatchEntity.swift in Sources */,
 				18DB64F61A68C1C700D5D852 /* GlobalSettings.swift in Sources */,
 				18EDFDD31A68E5CC00B7F59C /* GameFramework.xcdatamodeld in Sources */,
 				18DB64F41A68C19700D5D852 /* Constants.swift in Sources */,

@@ -15,6 +15,7 @@ class GlobalSingleton {
         static var instance: GlobalSingleton?
         static var token: dispatch_once_t = 0
         static var current_score : Int32 = 0
+        static var rootMatchEntity : MatchEntity!
     }
 
     class var sharedInstance: GlobalSingleton {
@@ -33,6 +34,7 @@ class GlobalSingleton {
                 
                 GlobalSettings.addUserDefaults()
                 //GlobalSettings.addGameLevels()
+                Static.rootMatchEntity = MatchEntity()
                 
             }
         }
@@ -41,14 +43,14 @@ class GlobalSingleton {
         return Static.instance!
     }
     
-    func getCurrentScore() -> Int32 {
+    func getRootMatch() -> MatchEntity {
      
-        return Static.current_score;
+        return Static.rootMatchEntity
     }
     
-    func setCurrentScore(current_score:Int32) {
+    func setRootMatch(rootMatch:MatchEntity) {
         
-        Static.current_score = current_score;
+        Static.rootMatchEntity = rootMatch
     }
     
        
