@@ -8,11 +8,11 @@
 
 import UIKit
 
-class MatchEntityOperations: MatchEntity {
+class MatchEntityModel: MatchEntity {
    
 }
 
-extension MatchEntityOperations{
+extension MatchEntityModel{
     
     class func saveMatchToDatabase(aMatchEntity:UMatchEntity){
       

@@ -94,7 +94,7 @@ class ScoreboardViewController: UIViewController {
     @IBAction func saveButtonClick(sender:UIButton){
         
         
-        MatchEntityOperations.saveMatchToDatabase(GlobalSingleton.sharedInstance.getRootMatch())
+        MatchEntityModel.saveMatchToDatabase(GlobalSingleton.sharedInstance.getRootMatch())
         
         
     }
