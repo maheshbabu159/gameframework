@@ -87,7 +87,13 @@ class GlobalSettings {
         let defaultLocation = LocationEntity.createEntity() as LocationEntity
 
         defaultTournment.tournment_id = GlobalSettings.getNewTournmentId()
+        defaultTournment.title = "Default"
+       
+        defaultLocation.location_id = GlobalSettings.getNewLocationId()
+        defaultLocation.title = "Default"
         
+        NSManagedObjectContext.defaultContext().saveToPersistentStoreAndWait()
+
     }
     
     class func addGameLevels() {

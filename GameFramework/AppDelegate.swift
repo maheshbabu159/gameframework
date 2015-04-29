@@ -24,15 +24,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Initialize global singleton
         GlobalSingleton.sharedInstance
         
-        let levelsArray = LevelsEntity.findAll() as [LevelsEntity]
-        
+        let levelsArray = MatchEntity.findAll() as [MatchEntity]
+        //let location = MatchEntity.createEntity() as MatchEntity
+
         //let levelEntity = levelsArray[1]
         
         //println(levelEntity.level_number)
         
         for levelEntity in levelsArray{
             
-            println(levelEntity.level_number)
+            println(levelEntity.home_team_tries)
         }
         
     

@@ -6,9 +6,7 @@
 //  Copyright (c) 2015 apple. All rights reserved.
 //
 
-import Foundation
-import CoreData
-
+@objc(MatchEntity)
 class MatchEntity: NSManagedObject {
 
     @NSManaged var match_id: Int

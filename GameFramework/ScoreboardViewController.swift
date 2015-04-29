@@ -91,7 +91,13 @@ class ScoreboardViewController: UIViewController {
         }
 
     }
-    
+    @IBAction func saveButtonClick(sender:UIButton){
+        
+        
+        MatchEntityOperations.saveMatchToDatabase(GlobalSingleton.sharedInstance.getRootMatch())
+        
+        
+    }
     //MARK: Score update  methods
     func updateScores(enumValue : ButtonTags){
     

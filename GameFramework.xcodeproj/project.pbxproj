@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E38468F1AF090CF00353DF3 /* TournmentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E38468E1AF090CF00353DF3 /* TournmentEntity.swift */; };
+		0E3846951AF0936300353DF3 /* GameFramework.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 0E3846941AF0936300353DF3 /* GameFramework.xcdatamodel */; };
+		0E4EF3931AF096C200C49F07 /* LocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4EF3921AF096C200C49F07 /* LocationEntity.swift */; };
+		0E918F321AF0DA9800235702 /* MatchEntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E918F311AF0DA9800235702 /* MatchEntityModel.swift */; };
 		0ED891A71AEA1F3900DF0F27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ED891A61AEA1F3900DF0F27 /* Main.storyboard */; };
 		0EDA99F51AEE165500BECB9E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA99F41AEE165500BECB9E /* MainViewController.swift */; };
 		0EDA99F71AEE47FC00BECB9E /* BudgetEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA99F61AEE47FC00BECB9E /* BudgetEntity.swift */; };
@@ -20,32 +24,22 @@
 		18DB645F1A66AF9900D5D852 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DB645E1A66AF9900D5D852 /* AppDelegate.swift */; };
 		18DB646A1A66AF9900D5D852 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18DB64691A66AF9900D5D852 /* Images.xcassets */; };
 		18DB646D1A66AF9900D5D852 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18DB646B1A66AF9900D5D852 /* LaunchScreen.xib */; };
-		18DB64791A66AF9900D5D852 /* GameFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DB64781A66AF9900D5D852 /* GameFrameworkTests.swift */; };
 		18DB64881A66B87C00D5D852 /* sprites.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 18DB64851A66B87C00D5D852 /* sprites.atlas */; };
 		18DB648E1A66D5E700D5D852 /* GlobalSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DB648D1A66D5E700D5D852 /* GlobalSingleton.swift */; };
 		18DB64F41A68C19700D5D852 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DB64F31A68C19700D5D852 /* Constants.swift */; };
 		18DB64F61A68C1C700D5D852 /* GlobalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DB64F51A68C1C700D5D852 /* GlobalSettings.swift */; };
 		18DB64FA1A68E11300D5D852 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 18DB64F91A68E11300D5D852 /* Podfile */; };
-		18EDFDD31A68E5CC00B7F59C /* GameFramework.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18EDFDD11A68E5CC00B7F59C /* GameFramework.xcdatamodeld */; };
 		18FCF1221AEFD51300304FD5 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF11F1AEFD51300304FD5 /* GameOverScene.swift */; };
 		18FCF1231AEFD51300304FD5 /* GamePlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF1201AEFD51300304FD5 /* GamePlayScene.swift */; };
 		18FCF1241AEFD51300304FD5 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF1211AEFD51300304FD5 /* MenuScene.swift */; };
-		18FCF1261AF07FF600304FD5 /* TournmentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF1251AF07FF600304FD5 /* TournmentEntity.swift */; };
-		18FCF1281AF07FF700304FD5 /* LocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF1271AF07FF700304FD5 /* LocationEntity.swift */; };
 		2A337A71D749B7F547778266 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA65DF3E82C441535B2302D4 /* libPods.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		18DB64731A66AF9900D5D852 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 18DB64511A66AF9900D5D852 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 18DB64581A66AF9900D5D852;
-			remoteInfo = GameFramework;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		0E38468E1AF090CF00353DF3 /* TournmentEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournmentEntity.swift; sourceTree = "<group>"; };
+		0E3846941AF0936300353DF3 /* GameFramework.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GameFramework.xcdatamodel; sourceTree = "<group>"; };
+		0E4EF3921AF096C200C49F07 /* LocationEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationEntity.swift; sourceTree = "<group>"; };
+		0E918F311AF0DA9800235702 /* MatchEntityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchEntityModel.swift; sourceTree = "<group>"; };
 		0ED891A61AEA1F3900DF0F27 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0EDA99F41AEE165500BECB9E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0EDA99F61AEE47FC00BECB9E /* BudgetEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetEntity.swift; sourceTree = "<group>"; };
@@ -61,7 +55,6 @@
 		18DB645E1A66AF9900D5D852 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18DB64691A66AF9900D5D852 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		18DB646C1A66AF9900D5D852 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		18DB64721A66AF9900D5D852 /* GameFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DB64771A66AF9900D5D852 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		18DB64781A66AF9900D5D852 /* GameFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameFrameworkTests.swift; sourceTree = "<group>"; };
 		18DB64851A66B87C00D5D852 /* sprites.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = sprites.atlas; sourceTree = "<group>"; };
@@ -70,12 +63,9 @@
 		18DB64F51A68C1C700D5D852 /* GlobalSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalSettings.swift; sourceTree = "<group>"; };
 		18DB64F91A68E11300D5D852 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
 		18EDFDCF1A68E42300B7F59C /* GameFramework-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GameFramework-Bridging-Header.h"; sourceTree = "<group>"; };
-		18EDFDD21A68E5CC00B7F59C /* GameFramework.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GameFramework.xcdatamodel; sourceTree = "<group>"; };
 		18FCF11F1AEFD51300304FD5 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		18FCF1201AEFD51300304FD5 /* GamePlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePlayScene.swift; sourceTree = "<group>"; };
 		18FCF1211AEFD51300304FD5 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
-		18FCF1251AF07FF600304FD5 /* TournmentEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournmentEntity.swift; sourceTree = "<group>"; };
-		18FCF1271AF07FF700304FD5 /* LocationEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationEntity.swift; sourceTree = "<group>"; };
 		2D200F58536477D48FD4F031 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4CC403677C5B4310E9FF778E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DA65DF3E82C441535B2302D4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,16 +80,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		18DB646F1A66AF9900D5D852 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E918F301AF0DA5F00235702 /* DataOperations */ = {
+			isa = PBXGroup;
+			children = (
+				0E918F311AF0DA9800235702 /* MatchEntityModel.swift */,
+			);
+			name = DataOperations;
+			sourceTree = "<group>";
+		};
 		0EDD2EF81AEF888A007E0CEB /* UManaged */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,8 +102,8 @@
 		0EDD2EF91AEF8893007E0CEB /* Managed */ = {
 			isa = PBXGroup;
 			children = (
-				18FCF1271AF07FF700304FD5 /* LocationEntity.swift */,
-				18FCF1251AF07FF600304FD5 /* TournmentEntity.swift */,
+				0E4EF3921AF096C200C49F07 /* LocationEntity.swift */,
+				0E38468E1AF090CF00353DF3 /* TournmentEntity.swift */,
 				18D4B4F51AEF159F003558F5 /* MatchEntity.swift */,
 				0EDA99F81AEE47FD00BECB9E /* CategoryEntity.swift */,
 				0EDA99F61AEE47FC00BECB9E /* BudgetEntity.swift */,
@@ -145,7 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				18DB64591A66AF9900D5D852 /* GameFramework.app */,
-				18DB64721A66AF9900D5D852 /* GameFrameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,7 +143,7 @@
 		18DB645B1A66AF9900D5D852 /* GameFramework */ = {
 			isa = PBXGroup;
 			children = (
-				18EDFDD11A68E5CC00B7F59C /* GameFramework.xcdatamodeld */,
+				0E3846941AF0936300353DF3 /* GameFramework.xcdatamodel */,
 				18DB64F31A68C19700D5D852 /* Constants.swift */,
 				18DB645E1A66AF9900D5D852 /* AppDelegate.swift */,
 				18DB64691A66AF9900D5D852 /* Images.xcassets */,
@@ -208,6 +198,7 @@
 		18DB64EF1A68C08500D5D852 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0E918F301AF0DA5F00235702 /* DataOperations */,
 				18DB64F01A68C09100D5D852 /* DataObjects */,
 			);
 			name = Model;
@@ -273,24 +264,6 @@
 			productReference = 18DB64591A66AF9900D5D852 /* GameFramework.app */;
 			productType = "com.apple.product-type.application";
 		};
-		18DB64711A66AF9900D5D852 /* GameFrameworkTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 18DB647F1A66AF9900D5D852 /* Build configuration list for PBXNativeTarget "GameFrameworkTests" */;
-			buildPhases = (
-				18DB646E1A66AF9900D5D852 /* Sources */,
-				18DB646F1A66AF9900D5D852 /* Frameworks */,
-				18DB64701A66AF9900D5D852 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				18DB64741A66AF9900D5D852 /* PBXTargetDependency */,
-			);
-			name = GameFrameworkTests;
-			productName = GameFrameworkTests;
-			productReference = 18DB64721A66AF9900D5D852 /* GameFrameworkTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -302,10 +275,6 @@
 				TargetAttributes = {
 					18DB64581A66AF9900D5D852 = {
 						CreatedOnToolsVersion = 6.1;
-					};
-					18DB64711A66AF9900D5D852 = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 18DB64581A66AF9900D5D852;
 					};
 				};
 			};
@@ -323,7 +292,6 @@
 			projectRoot = "";
 			targets = (
 				18DB64581A66AF9900D5D852 /* GameFramework */,
-				18DB64711A66AF9900D5D852 /* GameFrameworkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -339,13 +307,6 @@
 				18DB64881A66B87C00D5D852 /* sprites.atlas in Resources */,
 				18DB64FA1A68E11300D5D852 /* Podfile in Resources */,
 				18BD54C01AEE967F002BB1AB /* Main_Rugby.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		18DB64701A66AF9900D5D852 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,37 +357,22 @@
 				18FCF1231AEFD51300304FD5 /* GamePlayScene.swift in Sources */,
 				0EDD2EFB1AEF8A62007E0CEB /* UMatchEntity.swift in Sources */,
 				18DB64F61A68C1C700D5D852 /* GlobalSettings.swift in Sources */,
-				18FCF1281AF07FF700304FD5 /* LocationEntity.swift in Sources */,
-				18EDFDD31A68E5CC00B7F59C /* GameFramework.xcdatamodeld in Sources */,
+				0E918F321AF0DA9800235702 /* MatchEntityModel.swift in Sources */,
+				0E4EF3931AF096C200C49F07 /* LocationEntity.swift in Sources */,
 				18DB64F41A68C19700D5D852 /* Constants.swift in Sources */,
 				183AA34B1A68F68000EAE7B5 /* LevelsEntity.swift in Sources */,
 				18D4B4F61AEF159F003558F5 /* MatchEntity.swift in Sources */,
 				18BD54C31AEE9D15002BB1AB /* MainMenuViewController.swift in Sources */,
 				18BD54C51AEEA3EF002BB1AB /* ScoreboardViewController.swift in Sources */,
+				0E3846951AF0936300353DF3 /* GameFramework.xcdatamodel in Sources */,
 				0EDA99F71AEE47FC00BECB9E /* BudgetEntity.swift in Sources */,
-				18FCF1261AF07FF600304FD5 /* TournmentEntity.swift in Sources */,
+				0E38468F1AF090CF00353DF3 /* TournmentEntity.swift in Sources */,
 				18DB648E1A66D5E700D5D852 /* GlobalSingleton.swift in Sources */,
 				18DB645F1A66AF9900D5D852 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		18DB646E1A66AF9900D5D852 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				18DB64791A66AF9900D5D852 /* GameFrameworkTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		18DB64741A66AF9900D5D852 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 18DB64581A66AF9900D5D852 /* GameFramework */;
-			targetProxy = 18DB64731A66AF9900D5D852 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		18DB646B1A66AF9900D5D852 /* LaunchScreen.xib */ = {
@@ -545,42 +491,6 @@
 			};
 			name = Release;
 		};
-		18DB64801A66AF9900D5D852 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = GameFrameworkTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameFramework.app/GameFramework";
-			};
-			name = Debug;
-		};
-		18DB64811A66AF9900D5D852 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = GameFrameworkTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GameFramework.app/GameFramework";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -602,29 +512,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		18DB647F1A66AF9900D5D852 /* Build configuration list for PBXNativeTarget "GameFrameworkTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				18DB64801A66AF9900D5D852 /* Debug */,
-				18DB64811A66AF9900D5D852 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		18EDFDD11A68E5CC00B7F59C /* GameFramework.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				18EDFDD21A68E5CC00B7F59C /* GameFramework.xcdatamodel */,
-			);
-			currentVersion = 18EDFDD21A68E5CC00B7F59C /* GameFramework.xcdatamodel */;
-			path = GameFramework.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 18DB64511A66AF9900D5D852 /* Project object */;
 }

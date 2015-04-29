@@ -6,66 +6,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GameFramework/UMatchEntity.swift"
-            timestampString = "451889611.811048"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "UMatchEntity"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GameFramework.UMatchEntity.tournment.setter : Swift.String"
-                  moduleName = "GameFramework"
-                  urlString = "file:///Users/maheshbabusomineni/Desktop/iOSWorkspace/gameframework/GameFramework/UMatchEntity.swift"
-                  timestampString = "451908519.570196"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "39">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GameFramework.UMatchEntity.tournment.materializeForSet : Swift.String"
-                  moduleName = "GameFramework"
-                  urlString = "file:///Users/maheshbabusomineni/Desktop/iOSWorkspace/gameframework/GameFramework/UMatchEntity.swift"
-                  timestampString = "451908519.5704"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "25">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GameFramework.UMatchEntity.init (GameFramework.UMatchEntity.Type)() -&gt; GameFramework.UMatchEntity"
-                  moduleName = "GameFramework"
-                  urlString = "file:///Users/maheshbabusomineni/Desktop/iOSWorkspace/gameframework/GameFramework/UMatchEntity.swift"
-                  timestampString = "451908519.570602"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "53">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -85,56 +25,40 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GameFramework/UMatchEntity.swift"
-            timestampString = "451889638.716402"
+            filePath = "GameFramework/GlobalSettings.swift"
+            timestampString = "451916158.363523"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "12"
-            endingLineNumber = "12"
-            landmarkName = "UMatchEntity"
-            landmarkType = "3">
+            startingLineNumber = "8"
+            endingLineNumber = "8">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "GameFramework.UMatchEntity.match_id.getter : Swift.Int"
+                  symbolName = "GameFramework.GlobalSettings.__deallocating_deinit"
                   moduleName = "GameFramework"
-                  urlString = "file:///Users/maheshbabusomineni/Desktop/iOSWorkspace/gameframework/GameFramework/UMatchEntity.swift"
-                  timestampString = "451908519.60553"
+                  urlString = "file:///Users/maheshbabusomineni/Desktop/iOSWorkspace/gameframework/GameFramework/GlobalSettings.swift"
+                  timestampString = "451993168.963044"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "18">
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "12">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "GameFramework.UMatchEntity.match_id.materializeForSet : Swift.Int"
+                  symbolName = "GameFramework.GlobalSettings.init (GameFramework.GlobalSettings.Type)() -&gt; GameFramework.GlobalSettings"
                   moduleName = "GameFramework"
-                  urlString = "file:///Users/maheshbabusomineni/Desktop/iOSWorkspace/gameframework/GameFramework/UMatchEntity.swift"
-                  timestampString = "451908519.606019"
+                  urlString = "file:///Users/maheshbabusomineni/Desktop/iOSWorkspace/gameframework/GameFramework/GlobalSettings.swift"
+                  timestampString = "451993168.963139"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "25">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "GameFramework.UMatchEntity.init (GameFramework.UMatchEntity.Type)() -&gt; GameFramework.UMatchEntity"
-                  moduleName = "GameFramework"
-                  urlString = "file:///Users/maheshbabusomineni/Desktop/iOSWorkspace/gameframework/GameFramework/UMatchEntity.swift"
-                  timestampString = "451908519.606336"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "13"
-                  endingLineNumber = "13"
-                  offsetFromSymbolStart = "40">
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "12">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -145,14 +69,46 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GameFramework/GlobalSingleton.swift"
-            timestampString = "451890751.761492"
+            filePath = "GameFramework/GlobalSettings.swift"
+            timestampString = "451974971.024758"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "getNewTournmentId()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GameFramework/MatchEntityModel.swift"
+            timestampString = "451993099.148664"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "saveMatchToDatabase(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GameFramework/AppDelegate.swift"
+            timestampString = "451993122.334239"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "31"
             endingLineNumber = "31"
-            landmarkName = "GlobalSingleton"
-            landmarkType = "3">
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
