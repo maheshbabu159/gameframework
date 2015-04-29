@@ -28,13 +28,14 @@ class GlobalSingleton {
             
             let appItertationNumber = GlobalVariables.globalUserDefaults.integerForKey(GlobalVariables.user_defaults_app_iteration_number_key)
             
-            
+            Static.rootMatchEntity = UMatchEntity()
+
             //If the is running first time set the default values
             if(appItertationNumber==0){
                 
                 GlobalSettings.addUserDefaults()
+                GlobalSettings.addDefaultData()
                 //GlobalSettings.addGameLevels()
-                Static.rootMatchEntity = UMatchEntity()
                 
             }
         }

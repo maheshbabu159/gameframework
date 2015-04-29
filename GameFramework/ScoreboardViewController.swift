@@ -81,7 +81,7 @@ class ScoreboardViewController: UIViewController {
                 
             case .kGuestTriesButtonTag:
               
-                println("2001")
+                updateScores(ButtonTags.kGuestTriesButtonTag)
                 
             default:
                 
@@ -113,7 +113,11 @@ class ScoreboardViewController: UIViewController {
                 
             case .kGuestTriesButtonTag:
                 
-                println("2001")
+                var button : UIButton = self.view.viewWithTag(Int(ButtonTags.kGuestTriesButtonTag.rawValue)) as UIButton
+                
+                GlobalSingleton.sharedInstance.getRootMatch().guest_team_tries = GlobalSingleton.sharedInstance.getRootMatch().guest_team_tries + 1
+                
+                button.setTitle("\( GlobalSingleton.sharedInstance.getRootMatch().guest_team_tries)", forState: UIControlState.Normal)
                 
             default:
                 

@@ -18,6 +18,7 @@ class MatchEntity: NSManagedObject {
     @NSManaged var home_team_name: String
     @NSManaged var guest_team_name: String
     @NSManaged var home_team_tries: Int
+    @NSManaged var guest_team_tries: Int
     @NSManaged var home_team_penalties: Int
     @NSManaged var guest_team_penalties: Int
     @NSManaged var home_team_filed_goals: Int

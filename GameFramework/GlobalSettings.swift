@@ -21,6 +21,49 @@ class GlobalSettings {
         NSUserDefaults.standardUserDefaults().synchronize()
 
     }
+    
+    
+    class func getNewMatchId() -> Int{
+        
+        var currentValue = GlobalVariables.globalUserDefaults.integerForKey(GlobalVariables.user_defaults_match_id_key)
+        
+        currentValue = currentValue+1;
+        
+        GlobalVariables.globalUserDefaults.setInteger(currentValue, forKey: GlobalVariables.user_defaults_match_id_key)
+        
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+        return GlobalVariables.globalUserDefaults.integerForKey(GlobalVariables.user_defaults_match_id_key)
+        
+    }
+    
+    class func getNewLocationId() -> Int{
+        
+        var currentValue = GlobalVariables.globalUserDefaults.integerForKey(GlobalVariables.user_defaults_location_id_key)
+        
+        currentValue = currentValue+1;
+        
+        GlobalVariables.globalUserDefaults.setInteger(currentValue, forKey: GlobalVariables.user_defaults_location_id_key)
+        
+        NSUserDefaults.standardUserDefaults().synchronize()
+    
+        return GlobalVariables.globalUserDefaults.integerForKey(GlobalVariables.user_defaults_location_id_key)
+    }
+
+    class func getNewTournmentId()-> Int{
+        
+        var currentValue = GlobalVariables.globalUserDefaults.integerForKey(GlobalVariables.user_defaults_tournment_id_key)
+        
+        currentValue = currentValue+1;
+        
+        GlobalVariables.globalUserDefaults.setInteger(currentValue, forKey: GlobalVariables.user_defaults_tournment_id_key)
+        
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+        return GlobalVariables.globalUserDefaults.integerForKey(GlobalVariables.user_defaults_tournment_id_key)
+        
+    }
+
     class func addUserDefaults(){
         
         
@@ -28,15 +71,23 @@ class GlobalSettings {
         
         GlobalVariables.globalUserDefaults.setBool(false, forKey: GlobalVariables.user_defaults_app_purchased_flag_key)
         
-        GlobalVariables.globalUserDefaults.setInteger(0,forKey:GlobalVariables.user_defaults_match_id_key)
-     
-        GlobalVariables.globalUserDefaults.setInteger(0,forKey:GlobalVariables.user_defaults_location_id_key)
-
-        GlobalVariables.globalUserDefaults.setInteger(0,forKey:GlobalVariables.user_defaults_tournment_id_key)
-
+        GlobalVariables.globalUserDefaults.setInteger(-1,forKey:GlobalVariables.user_defaults_match_id_key)
+        
+        GlobalVariables.globalUserDefaults.setInteger(-1,forKey:GlobalVariables.user_defaults_location_id_key)
+        
+        GlobalVariables.globalUserDefaults.setInteger(-1,forKey:GlobalVariables.user_defaults_tournment_id_key)
+        
         NSUserDefaults.standardUserDefaults().synchronize()
 
 
+    }
+    class func addDefaultData(){
+    
+        let defaultTournment = TournmentEntity.createEntity() as TournmentEntity
+        let defaultLocation = LocationEntity.createEntity() as LocationEntity
+
+        defaultTournment.tournment_id = GlobalSettings.getNewTournmentId()
+        
     }
     
     class func addGameLevels() {

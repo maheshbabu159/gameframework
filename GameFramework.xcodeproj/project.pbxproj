@@ -27,6 +27,11 @@
 		18DB64F61A68C1C700D5D852 /* GlobalSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DB64F51A68C1C700D5D852 /* GlobalSettings.swift */; };
 		18DB64FA1A68E11300D5D852 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 18DB64F91A68E11300D5D852 /* Podfile */; };
 		18EDFDD31A68E5CC00B7F59C /* GameFramework.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 18EDFDD11A68E5CC00B7F59C /* GameFramework.xcdatamodeld */; };
+		18FCF11C1AEFD31400304FD5 /* TournmentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF11B1AEFD31400304FD5 /* TournmentEntity.swift */; };
+		18FCF11E1AEFD31500304FD5 /* LocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF11D1AEFD31500304FD5 /* LocationEntity.swift */; };
+		18FCF1221AEFD51300304FD5 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF11F1AEFD51300304FD5 /* GameOverScene.swift */; };
+		18FCF1231AEFD51300304FD5 /* GamePlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF1201AEFD51300304FD5 /* GamePlayScene.swift */; };
+		18FCF1241AEFD51300304FD5 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF1211AEFD51300304FD5 /* MenuScene.swift */; };
 		2A337A71D749B7F547778266 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA65DF3E82C441535B2302D4 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +71,11 @@
 		18DB64F91A68E11300D5D852 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = "<group>"; };
 		18EDFDCF1A68E42300B7F59C /* GameFramework-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GameFramework-Bridging-Header.h"; sourceTree = "<group>"; };
 		18EDFDD21A68E5CC00B7F59C /* GameFramework.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GameFramework.xcdatamodel; sourceTree = "<group>"; };
+		18FCF11B1AEFD31400304FD5 /* TournmentEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TournmentEntity.swift; sourceTree = "<group>"; };
+		18FCF11D1AEFD31500304FD5 /* LocationEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationEntity.swift; sourceTree = "<group>"; };
+		18FCF11F1AEFD51300304FD5 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		18FCF1201AEFD51300304FD5 /* GamePlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePlayScene.swift; sourceTree = "<group>"; };
+		18FCF1211AEFD51300304FD5 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		2D200F58536477D48FD4F031 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4CC403677C5B4310E9FF778E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		DA65DF3E82C441535B2302D4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +113,8 @@
 			children = (
 				18D4B4F51AEF159F003558F5 /* MatchEntity.swift */,
 				0EDA99F81AEE47FD00BECB9E /* CategoryEntity.swift */,
+				18FCF11D1AEFD31500304FD5 /* LocationEntity.swift */,
+				18FCF11B1AEFD31400304FD5 /* TournmentEntity.swift */,
 				0EDA99F61AEE47FC00BECB9E /* BudgetEntity.swift */,
 				183AA34A1A68F68000EAE7B5 /* LevelsEntity.swift */,
 			);
@@ -213,6 +225,9 @@
 		18DB64F21A68C0C000D5D852 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				18FCF11F1AEFD51300304FD5 /* GameOverScene.swift */,
+				18FCF1201AEFD51300304FD5 /* GamePlayScene.swift */,
+				18FCF1211AEFD51300304FD5 /* MenuScene.swift */,
 				18BD54C11AEE9CE5002BB1AB /* Rugby */,
 				0EDA99F41AEE165500BECB9E /* MainViewController.swift */,
 			);
@@ -376,7 +391,11 @@
 			files = (
 				0EDA99F51AEE165500BECB9E /* MainViewController.swift in Sources */,
 				0EDA99F91AEE47FD00BECB9E /* CategoryEntity.swift in Sources */,
+				18FCF1221AEFD51300304FD5 /* GameOverScene.swift in Sources */,
+				18FCF1241AEFD51300304FD5 /* MenuScene.swift in Sources */,
+				18FCF1231AEFD51300304FD5 /* GamePlayScene.swift in Sources */,
 				0EDD2EFB1AEF8A62007E0CEB /* UMatchEntity.swift in Sources */,
+				18FCF11C1AEFD31400304FD5 /* TournmentEntity.swift in Sources */,
 				18DB64F61A68C1C700D5D852 /* GlobalSettings.swift in Sources */,
 				18EDFDD31A68E5CC00B7F59C /* GameFramework.xcdatamodeld in Sources */,
 				18DB64F41A68C19700D5D852 /* Constants.swift in Sources */,
@@ -386,6 +405,7 @@
 				18BD54C51AEEA3EF002BB1AB /* ScoreboardViewController.swift in Sources */,
 				0EDA99F71AEE47FC00BECB9E /* BudgetEntity.swift in Sources */,
 				18DB648E1A66D5E700D5D852 /* GlobalSingleton.swift in Sources */,
+				18FCF11E1AEFD31500304FD5 /* LocationEntity.swift in Sources */,
 				18DB645F1A66AF9900D5D852 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -17,6 +17,8 @@ class UMatchEntity: NSObject {
     var home_team_name: String = ""
     var guest_team_name: String = ""
     var home_team_tries: Int = 0
+    var guest_team_tries: Int = 0
+
     var home_team_penalties: Int = 0
     var guest_team_penalties: Int = 0
     var home_team_filed_goals: Int = 0
