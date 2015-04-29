@@ -11,6 +11,9 @@
 		0E3846951AF0936300353DF3 /* GameFramework.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 0E3846941AF0936300353DF3 /* GameFramework.xcdatamodel */; };
 		0E4EF3931AF096C200C49F07 /* LocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4EF3921AF096C200C49F07 /* LocationEntity.swift */; };
 		0E918F321AF0DA9800235702 /* MatchEntityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E918F311AF0DA9800235702 /* MatchEntityModel.swift */; };
+		0E918F341AF106F600235702 /* MatchesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E918F331AF106F600235702 /* MatchesListViewController.swift */; };
+		0E918F361AF1071500235702 /* MatchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E918F351AF1071500235702 /* MatchDetailsViewController.swift */; };
+		0E918F381AF1073800235702 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E918F371AF1073800235702 /* SettingsViewController.swift */; };
 		0ED891A71AEA1F3900DF0F27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ED891A61AEA1F3900DF0F27 /* Main.storyboard */; };
 		0EDA99F51AEE165500BECB9E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA99F41AEE165500BECB9E /* MainViewController.swift */; };
 		0EDA99F71AEE47FC00BECB9E /* BudgetEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA99F61AEE47FC00BECB9E /* BudgetEntity.swift */; };
@@ -40,6 +43,9 @@
 		0E3846941AF0936300353DF3 /* GameFramework.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GameFramework.xcdatamodel; sourceTree = "<group>"; };
 		0E4EF3921AF096C200C49F07 /* LocationEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationEntity.swift; sourceTree = "<group>"; };
 		0E918F311AF0DA9800235702 /* MatchEntityModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchEntityModel.swift; sourceTree = "<group>"; };
+		0E918F331AF106F600235702 /* MatchesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesListViewController.swift; sourceTree = "<group>"; };
+		0E918F351AF1071500235702 /* MatchDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewController.swift; sourceTree = "<group>"; };
+		0E918F371AF1073800235702 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0ED891A61AEA1F3900DF0F27 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0EDA99F41AEE165500BECB9E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0EDA99F61AEE47FC00BECB9E /* BudgetEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetEntity.swift; sourceTree = "<group>"; };
@@ -117,6 +123,9 @@
 			children = (
 				18BD54C21AEE9D15002BB1AB /* MainMenuViewController.swift */,
 				18BD54C41AEEA3EF002BB1AB /* ScoreboardViewController.swift */,
+				0E918F331AF106F600235702 /* MatchesListViewController.swift */,
+				0E918F351AF1071500235702 /* MatchDetailsViewController.swift */,
+				0E918F371AF1073800235702 /* SettingsViewController.swift */,
 			);
 			name = Rugby;
 			sourceTree = "<group>";
@@ -355,12 +364,15 @@
 				18FCF1221AEFD51300304FD5 /* GameOverScene.swift in Sources */,
 				18FCF1241AEFD51300304FD5 /* MenuScene.swift in Sources */,
 				18FCF1231AEFD51300304FD5 /* GamePlayScene.swift in Sources */,
+				0E918F361AF1071500235702 /* MatchDetailsViewController.swift in Sources */,
 				0EDD2EFB1AEF8A62007E0CEB /* UMatchEntity.swift in Sources */,
 				18DB64F61A68C1C700D5D852 /* GlobalSettings.swift in Sources */,
 				0E918F321AF0DA9800235702 /* MatchEntityModel.swift in Sources */,
 				0E4EF3931AF096C200C49F07 /* LocationEntity.swift in Sources */,
 				18DB64F41A68C19700D5D852 /* Constants.swift in Sources */,
+				0E918F341AF106F600235702 /* MatchesListViewController.swift in Sources */,
 				183AA34B1A68F68000EAE7B5 /* LevelsEntity.swift in Sources */,
+				0E918F381AF1073800235702 /* SettingsViewController.swift in Sources */,
 				18D4B4F61AEF159F003558F5 /* MatchEntity.swift in Sources */,
 				18BD54C31AEE9D15002BB1AB /* MainMenuViewController.swift in Sources */,
 				18BD54C51AEEA3EF002BB1AB /* ScoreboardViewController.swift in Sources */,
