@@ -36,6 +36,7 @@
 		18FCF1231AEFD51300304FD5 /* GamePlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF1201AEFD51300304FD5 /* GamePlayScene.swift */; };
 		18FCF1241AEFD51300304FD5 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF1211AEFD51300304FD5 /* MenuScene.swift */; };
 		2A337A71D749B7F547778266 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA65DF3E82C441535B2302D4 /* libPods.a */; };
+		B7535F9DE5AB568CBF1CBE03 /* libPods-GameFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA18F3074387F4734444144 /* libPods-GameFramework.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		18FCF1211AEFD51300304FD5 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
 		2D200F58536477D48FD4F031 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		4CC403677C5B4310E9FF778E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9BA18F3074387F4734444144 /* libPods-GameFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GameFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA65DF3E82C441535B2302D4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -83,6 +85,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A337A71D749B7F547778266 /* libPods.a in Frameworks */,
+				B7535F9DE5AB568CBF1CBE03 /* libPods-GameFramework.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +241,7 @@
 			isa = PBXGroup;
 			children = (
 				DA65DF3E82C441535B2302D4 /* libPods.a */,
+				9BA18F3074387F4734444144 /* libPods-GameFramework.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -334,7 +338,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GameFramework/Pods-GameFramework-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E80D02A23FD7D9226E899769 /* Check Pods Manifest.lock */ = {

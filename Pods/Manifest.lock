@@ -1,10 +1,55 @@
 PODS:
-  - MagicalRecord/Shorthand (2.2)
+  - ActionSheetPicker-3.0 (1.6.1)
+  - Bolts (1.1.5):
+    - Bolts/AppLinks (= 1.1.5)
+    - Bolts/Tasks (= 1.1.5)
+  - Bolts/AppLinks (1.1.5):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.1.5)
+  - Facebook-iOS-SDK (4.0.1):
+    - Bolts (~> 1.0)
+    - Facebook-iOS-SDK/CoreKit (= 4.0.1)
+    - Facebook-iOS-SDK/LoginKit (= 4.0.1)
+    - Facebook-iOS-SDK/ShareKit (= 4.0.1)
+  - Facebook-iOS-SDK/CoreKit (4.0.1):
+    - Bolts (~> 1.0)
+    - Facebook-iOS-SDK/CoreKit/no-arc (= 4.0.1)
+  - Facebook-iOS-SDK/CoreKit/no-arc (4.0.1):
+    - Bolts (~> 1.0)
+  - Facebook-iOS-SDK/LoginKit (4.0.1):
+    - Bolts (~> 1.0)
+    - Facebook-iOS-SDK/CoreKit
+  - Facebook-iOS-SDK/ShareKit (4.0.1):
+    - Bolts (~> 1.0)
+    - Facebook-iOS-SDK/CoreKit
+  - Google-Mobile-Ads-SDK (7.1.0)
+  - iRate (1.10.3)
+  - iVersion (1.11.4)
+  - MagicalRecord (2.2):
+    - MagicalRecord/Core (= 2.2)
+  - MagicalRecord/Core (2.2)
+  - MKNetworkKit (0.87):
+    - Reachability (~> 3.1.0)
+  - Reachability (3.1.1)
 
 DEPENDENCIES:
-  - MagicalRecord/Shorthand
+  - ActionSheetPicker-3.0
+  - Facebook-iOS-SDK
+  - Google-Mobile-Ads-SDK
+  - iRate (~> 1.10.2)
+  - iVersion
+  - MagicalRecord
+  - MKNetworkKit
 
 SPEC CHECKSUMS:
-  MagicalRecord: 2b471584fc9e3137f3d0a56967917baa4979e224
+  ActionSheetPicker-3.0: f8da36f51ba109882a7cfa5979a4856b4e26fa37
+  Bolts: aac24961496d504aa56fc267cde95162a71bac39
+  Facebook-iOS-SDK: 6d05532c97e9c542f8d87f94b7f6ee217493d00b
+  Google-Mobile-Ads-SDK: 9b7c22345f13de4164e9e6d90ad49cce42124c3c
+  iRate: 724a3e080d5b0681e50a57d6cef1a81f83c23df3
+  iVersion: 2b6ffe708672cb494ba3cab150a94800c2892e81
+  MagicalRecord: f8a56bb87ab6552f20c4bb8681a1958a197ea3cd
+  MKNetworkKit: 60ad3c83b62183e40ba75ce772c9427c25b520de
+  Reachability: dd9aa4fb6667b9f787690a74f53cb7634ce99893
 
-COCOAPODS: 0.35.0
+COCOAPODS: 0.36.4

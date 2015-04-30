@@ -1,0 +1,6 @@
+#include "Pods-GameFramework-iVersion.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/iVersion" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/ActionSheetPicker-3.0" "${PODS_ROOT}/Headers/Public/Bolts" "${PODS_ROOT}/Headers/Public/Facebook-iOS-SDK" "${PODS_ROOT}/Headers/Public/Facebook-iOS-SDK/FBSDKCoreKit" "${PODS_ROOT}/Headers/Public/Facebook-iOS-SDK/FBSDKLoginKit" "${PODS_ROOT}/Headers/Public/Facebook-iOS-SDK/FBSDKShareKit" "${PODS_ROOT}/Headers/Public/Google-Mobile-Ads-SDK" "${PODS_ROOT}/Headers/Public/MKNetworkKit" "${PODS_ROOT}/Headers/Public/MKNetworkKit/Categories" "${PODS_ROOT}/Headers/Public/MagicalRecord" "${PODS_ROOT}/Headers/Public/Reachability" "${PODS_ROOT}/Headers/Public/iRate" "${PODS_ROOT}/Headers/Public/iVersion"
+OTHER_LDFLAGS = ${PODS_GAMEFRAMEWORK_IVERSION_OTHER_LDFLAGS} -ObjC
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES
