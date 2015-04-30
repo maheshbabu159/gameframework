@@ -3,5 +3,6 @@
 #endif
 
 #import "Pods-GameFramework-environment.h"
+#define MR_SHORTHAND 0
 #import <CoreData/CoreData.h>
 #import "CoreData+MagicalRecord.h"

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C0516FA572C9E53A4F08B0C2"
+               BlueprintIdentifier = "B6C0D55BCFA12942D42EC51F"
                BuildableName = "libPods-GameFramework-iRate.a"
                BlueprintName = "Pods-GameFramework-iRate"
                ReferencedContainer = "container:Pods.xcodeproj">

@@ -23,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Initialize global singleton
         GlobalSingleton.sharedInstance
-        
+        //let levelsArray = MatchEntity.createEntity() as MatchEntity
+
         let levelsArray = MatchEntity.findAll() as [MatchEntity]
         //let location = MatchEntity.createEntity() as MatchEntity
 

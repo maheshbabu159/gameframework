@@ -2,7 +2,7 @@
 target 'GameFramework' do
 
 pod 'MKNetworkKit'
-pod "MagicalRecord"
+pod "MagicalRecord/Shorthand"
 pod 'iRate', '~> 1.10.2'
 pod 'iVersion'
 pod 'Google-Mobile-Ads-SDK'

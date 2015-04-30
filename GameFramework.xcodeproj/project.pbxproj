@@ -35,8 +35,7 @@
 		18FCF1221AEFD51300304FD5 /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF11F1AEFD51300304FD5 /* GameOverScene.swift */; };
 		18FCF1231AEFD51300304FD5 /* GamePlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF1201AEFD51300304FD5 /* GamePlayScene.swift */; };
 		18FCF1241AEFD51300304FD5 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF1211AEFD51300304FD5 /* MenuScene.swift */; };
-		2A337A71D749B7F547778266 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA65DF3E82C441535B2302D4 /* libPods.a */; };
-		B7535F9DE5AB568CBF1CBE03 /* libPods-GameFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BA18F3074387F4734444144 /* libPods-GameFramework.a */; };
+		A9BD4265919D08A566704AD7 /* libPods-GameFramework.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 113551C011D6609BC5572A13 /* libPods-GameFramework.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +51,7 @@
 		0EDA99F61AEE47FC00BECB9E /* BudgetEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetEntity.swift; sourceTree = "<group>"; };
 		0EDA99F81AEE47FD00BECB9E /* CategoryEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryEntity.swift; sourceTree = "<group>"; };
 		0EDD2EFA1AEF8A62007E0CEB /* UMatchEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UMatchEntity.swift; sourceTree = "<group>"; };
+		113551C011D6609BC5572A13 /* libPods-GameFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GameFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		183AA34A1A68F68000EAE7B5 /* LevelsEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelsEntity.swift; sourceTree = "<group>"; };
 		18BD54BF1AEE967F002BB1AB /* Main_Rugby.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_Rugby.storyboard; sourceTree = "<group>"; };
 		18BD54C21AEE9D15002BB1AB /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
@@ -73,10 +73,8 @@
 		18FCF11F1AEFD51300304FD5 /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 		18FCF1201AEFD51300304FD5 /* GamePlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePlayScene.swift; sourceTree = "<group>"; };
 		18FCF1211AEFD51300304FD5 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
-		2D200F58536477D48FD4F031 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		4CC403677C5B4310E9FF778E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		9BA18F3074387F4734444144 /* libPods-GameFramework.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GameFramework.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DA65DF3E82C441535B2302D4 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		76557556C1F97FD4E32B10D9 /* Pods-GameFramework.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameFramework.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameFramework/Pods-GameFramework.debug.xcconfig"; sourceTree = "<group>"; };
+		A0FF7689F49619CD34B2B3EF /* Pods-GameFramework.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameFramework.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameFramework/Pods-GameFramework.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A337A71D749B7F547778266 /* libPods.a in Frameworks */,
-				B7535F9DE5AB568CBF1CBE03 /* libPods-GameFramework.a in Frameworks */,
+				A9BD4265919D08A566704AD7 /* libPods-GameFramework.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,8 +237,7 @@
 		567009C500DD25CA932D10C5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DA65DF3E82C441535B2302D4 /* libPods.a */,
-				9BA18F3074387F4734444144 /* libPods-GameFramework.a */,
+				113551C011D6609BC5572A13 /* libPods-GameFramework.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -249,8 +245,8 @@
 		FC2EDA7AD7C43BCBE405BCE6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2D200F58536477D48FD4F031 /* Pods.debug.xcconfig */,
-				4CC403677C5B4310E9FF778E /* Pods.release.xcconfig */,
+				76557556C1F97FD4E32B10D9 /* Pods-GameFramework.debug.xcconfig */,
+				A0FF7689F49619CD34B2B3EF /* Pods-GameFramework.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -483,7 +479,7 @@
 		};
 		18DB647D1A66AF9900D5D852 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D200F58536477D48FD4F031 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 76557556C1F97FD4E32B10D9 /* Pods-GameFramework.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GameFramework/Info.plist;
@@ -496,7 +492,7 @@
 		};
 		18DB647E1A66AF9900D5D852 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4CC403677C5B4310E9FF778E /* Pods.release.xcconfig */;
+			baseConfigurationReference = A0FF7689F49619CD34B2B3EF /* Pods-GameFramework.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GameFramework/Info.plist;

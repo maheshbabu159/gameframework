@@ -25,9 +25,7 @@ PODS:
   - Google-Mobile-Ads-SDK (7.1.0)
   - iRate (1.10.3)
   - iVersion (1.11.4)
-  - MagicalRecord (2.2):
-    - MagicalRecord/Core (= 2.2)
-  - MagicalRecord/Core (2.2)
+  - MagicalRecord/Shorthand (2.2)
   - MKNetworkKit (0.87):
     - Reachability (~> 3.1.0)
   - Reachability (3.1.1)
@@ -38,7 +36,7 @@ DEPENDENCIES:
   - Google-Mobile-Ads-SDK
   - iRate (~> 1.10.2)
   - iVersion
-  - MagicalRecord
+  - MagicalRecord/Shorthand
   - MKNetworkKit
 
 SPEC CHECKSUMS:

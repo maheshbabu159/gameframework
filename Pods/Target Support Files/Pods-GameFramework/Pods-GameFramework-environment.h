@@ -72,17 +72,11 @@
 #define COCOAPODS_VERSION_MINOR_MKNetworkKit 87
 #define COCOAPODS_VERSION_PATCH_MKNetworkKit 0
 
-// MagicalRecord
-#define COCOAPODS_POD_AVAILABLE_MagicalRecord
-#define COCOAPODS_VERSION_MAJOR_MagicalRecord 2
-#define COCOAPODS_VERSION_MINOR_MagicalRecord 2
-#define COCOAPODS_VERSION_PATCH_MagicalRecord 0
-
-// MagicalRecord/Core
-#define COCOAPODS_POD_AVAILABLE_MagicalRecord_Core
-#define COCOAPODS_VERSION_MAJOR_MagicalRecord_Core 2
-#define COCOAPODS_VERSION_MINOR_MagicalRecord_Core 2
-#define COCOAPODS_VERSION_PATCH_MagicalRecord_Core 0
+// MagicalRecord/Shorthand
+#define COCOAPODS_POD_AVAILABLE_MagicalRecord_Shorthand
+#define COCOAPODS_VERSION_MAJOR_MagicalRecord_Shorthand 2
+#define COCOAPODS_VERSION_MINOR_MagicalRecord_Shorthand 2
+#define COCOAPODS_VERSION_PATCH_MagicalRecord_Shorthand 0
 
 // Reachability
 #define COCOAPODS_POD_AVAILABLE_Reachability
