@@ -14,6 +14,7 @@
 		0E918F341AF106F600235702 /* MatchesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E918F331AF106F600235702 /* MatchesListViewController.swift */; };
 		0E918F361AF1071500235702 /* MatchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E918F351AF1071500235702 /* MatchDetailsViewController.swift */; };
 		0E918F381AF1073800235702 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E918F371AF1073800235702 /* SettingsViewController.swift */; };
+		0EB65BD11B0AF82700F51C22 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB65BD01B0AF82700F51C22 /* BaseViewController.swift */; };
 		0ED891A71AEA1F3900DF0F27 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ED891A61AEA1F3900DF0F27 /* Main.storyboard */; };
 		0EDA99F51AEE165500BECB9E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA99F41AEE165500BECB9E /* MainViewController.swift */; };
 		0EDA99F71AEE47FC00BECB9E /* BudgetEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDA99F61AEE47FC00BECB9E /* BudgetEntity.swift */; };
@@ -46,6 +47,7 @@
 		0E918F331AF106F600235702 /* MatchesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchesListViewController.swift; sourceTree = "<group>"; };
 		0E918F351AF1071500235702 /* MatchDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewController.swift; sourceTree = "<group>"; };
 		0E918F371AF1073800235702 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0EB65BD01B0AF82700F51C22 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		0ED891A61AEA1F3900DF0F27 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		0EDA99F41AEE165500BECB9E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0EDA99F61AEE47FC00BECB9E /* BudgetEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetEntity.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 		18BD54C11AEE9CE5002BB1AB /* Rugby */ = {
 			isa = PBXGroup;
 			children = (
+				0EB65BD01B0AF82700F51C22 /* BaseViewController.swift */,
 				18BD54C21AEE9D15002BB1AB /* MainMenuViewController.swift */,
 				18BD54C41AEEA3EF002BB1AB /* ScoreboardViewController.swift */,
 				0E918F331AF106F600235702 /* MatchesListViewController.swift */,
@@ -228,8 +231,8 @@
 				18FCF11F1AEFD51300304FD5 /* GameOverScene.swift */,
 				18FCF1201AEFD51300304FD5 /* GamePlayScene.swift */,
 				18FCF1211AEFD51300304FD5 /* MenuScene.swift */,
-				18BD54C11AEE9CE5002BB1AB /* Rugby */,
 				0EDA99F41AEE165500BECB9E /* MainViewController.swift */,
+				18BD54C11AEE9CE5002BB1AB /* Rugby */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -362,6 +365,7 @@
 				0EDA99F51AEE165500BECB9E /* MainViewController.swift in Sources */,
 				0EDA99F91AEE47FD00BECB9E /* CategoryEntity.swift in Sources */,
 				18FCF1221AEFD51300304FD5 /* GameOverScene.swift in Sources */,
+				0EB65BD11B0AF82700F51C22 /* BaseViewController.swift in Sources */,
 				18FCF1241AEFD51300304FD5 /* MenuScene.swift in Sources */,
 				18FCF1231AEFD51300304FD5 /* GamePlayScene.swift in Sources */,
 				0E918F361AF1071500235702 /* MatchDetailsViewController.swift in Sources */,

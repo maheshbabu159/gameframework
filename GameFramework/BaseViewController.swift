@@ -1,14 +1,14 @@
 //
-//  MatchDetailsViewController.swift
+//  BaseViewController.swift
 //  GameFramework
 //
-//  Created by maheshbabu.somineni on 4/29/15.
+//  Created by maheshbabu.somineni on 5/19/15.
 //  Copyright (c) 2015 apple. All rights reserved.
 //
 
 import UIKit
 
-class MatchDetailsViewController: BaseViewController {
+class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

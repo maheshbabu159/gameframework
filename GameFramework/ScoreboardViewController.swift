@@ -26,7 +26,7 @@ enum BBPhoto1: Int {
     case festen = 30
 }
 
-class ScoreboardViewController: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate {
+class ScoreboardViewController: BaseViewController,UIPickerViewDataSource, UIPickerViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
