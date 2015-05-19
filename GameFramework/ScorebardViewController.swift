@@ -1,14 +1,14 @@
 //
-//  MainViewController.swift
+//  ScorebardViewController.swift
 //  GameFramework
 //
-//  Created by maheshbabu.somineni on 4/27/15.
+//  Created by maheshbabu.somineni on 5/19/15.
 //  Copyright (c) 2015 apple. All rights reserved.
 //
 
 import UIKit
 
-class MainViewController: BaseViewController {
+class ScorebardViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class MainViewController: BaseViewController {
     }
     
 
-    
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -30,7 +30,6 @@ class MainViewController: BaseViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    
+    */
 
-    
 }
