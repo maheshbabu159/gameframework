@@ -32,39 +32,81 @@
 
 // Facebook-iOS-SDK
 #define COCOAPODS_POD_AVAILABLE_Facebook_iOS_SDK
-#define COCOAPODS_VERSION_MAJOR_Facebook_iOS_SDK 4
-#define COCOAPODS_VERSION_MINOR_Facebook_iOS_SDK 0
-#define COCOAPODS_VERSION_PATCH_Facebook_iOS_SDK 1
+#define COCOAPODS_VERSION_MAJOR_Facebook_iOS_SDK 3
+#define COCOAPODS_VERSION_MINOR_Facebook_iOS_SDK 23
+#define COCOAPODS_VERSION_PATCH_Facebook_iOS_SDK 2
 
-// Facebook-iOS-SDK/CoreKit
-#define COCOAPODS_POD_AVAILABLE_Facebook_iOS_SDK_CoreKit
-#define COCOAPODS_VERSION_MAJOR_Facebook_iOS_SDK_CoreKit 4
-#define COCOAPODS_VERSION_MINOR_Facebook_iOS_SDK_CoreKit 0
-#define COCOAPODS_VERSION_PATCH_Facebook_iOS_SDK_CoreKit 1
+// FormatterKit
+#define COCOAPODS_POD_AVAILABLE_FormatterKit
+#define COCOAPODS_VERSION_MAJOR_FormatterKit 1
+#define COCOAPODS_VERSION_MINOR_FormatterKit 8
+#define COCOAPODS_VERSION_PATCH_FormatterKit 0
 
-// Facebook-iOS-SDK/CoreKit/no-arc
-#define COCOAPODS_POD_AVAILABLE_Facebook_iOS_SDK_CoreKit_no_arc
-#define COCOAPODS_VERSION_MAJOR_Facebook_iOS_SDK_CoreKit_no_arc 4
-#define COCOAPODS_VERSION_MINOR_Facebook_iOS_SDK_CoreKit_no_arc 0
-#define COCOAPODS_VERSION_PATCH_Facebook_iOS_SDK_CoreKit_no_arc 1
+// FormatterKit/AddressFormatter
+#define COCOAPODS_POD_AVAILABLE_FormatterKit_AddressFormatter
+#define COCOAPODS_VERSION_MAJOR_FormatterKit_AddressFormatter 1
+#define COCOAPODS_VERSION_MINOR_FormatterKit_AddressFormatter 8
+#define COCOAPODS_VERSION_PATCH_FormatterKit_AddressFormatter 0
 
-// Facebook-iOS-SDK/LoginKit
-#define COCOAPODS_POD_AVAILABLE_Facebook_iOS_SDK_LoginKit
-#define COCOAPODS_VERSION_MAJOR_Facebook_iOS_SDK_LoginKit 4
-#define COCOAPODS_VERSION_MINOR_Facebook_iOS_SDK_LoginKit 0
-#define COCOAPODS_VERSION_PATCH_Facebook_iOS_SDK_LoginKit 1
+// FormatterKit/ArrayFormatter
+#define COCOAPODS_POD_AVAILABLE_FormatterKit_ArrayFormatter
+#define COCOAPODS_VERSION_MAJOR_FormatterKit_ArrayFormatter 1
+#define COCOAPODS_VERSION_MINOR_FormatterKit_ArrayFormatter 8
+#define COCOAPODS_VERSION_PATCH_FormatterKit_ArrayFormatter 0
 
-// Facebook-iOS-SDK/ShareKit
-#define COCOAPODS_POD_AVAILABLE_Facebook_iOS_SDK_ShareKit
-#define COCOAPODS_VERSION_MAJOR_Facebook_iOS_SDK_ShareKit 4
-#define COCOAPODS_VERSION_MINOR_Facebook_iOS_SDK_ShareKit 0
-#define COCOAPODS_VERSION_PATCH_Facebook_iOS_SDK_ShareKit 1
+// FormatterKit/ColorFormatter
+#define COCOAPODS_POD_AVAILABLE_FormatterKit_ColorFormatter
+#define COCOAPODS_VERSION_MAJOR_FormatterKit_ColorFormatter 1
+#define COCOAPODS_VERSION_MINOR_FormatterKit_ColorFormatter 8
+#define COCOAPODS_VERSION_PATCH_FormatterKit_ColorFormatter 0
+
+// FormatterKit/LocationFormatter
+#define COCOAPODS_POD_AVAILABLE_FormatterKit_LocationFormatter
+#define COCOAPODS_VERSION_MAJOR_FormatterKit_LocationFormatter 1
+#define COCOAPODS_VERSION_MINOR_FormatterKit_LocationFormatter 8
+#define COCOAPODS_VERSION_PATCH_FormatterKit_LocationFormatter 0
+
+// FormatterKit/NameFormatter
+#define COCOAPODS_POD_AVAILABLE_FormatterKit_NameFormatter
+#define COCOAPODS_VERSION_MAJOR_FormatterKit_NameFormatter 1
+#define COCOAPODS_VERSION_MINOR_FormatterKit_NameFormatter 8
+#define COCOAPODS_VERSION_PATCH_FormatterKit_NameFormatter 0
+
+// FormatterKit/OrdinalNumberFormatter
+#define COCOAPODS_POD_AVAILABLE_FormatterKit_OrdinalNumberFormatter
+#define COCOAPODS_VERSION_MAJOR_FormatterKit_OrdinalNumberFormatter 1
+#define COCOAPODS_VERSION_MINOR_FormatterKit_OrdinalNumberFormatter 8
+#define COCOAPODS_VERSION_PATCH_FormatterKit_OrdinalNumberFormatter 0
+
+// FormatterKit/TimeIntervalFormatter
+#define COCOAPODS_POD_AVAILABLE_FormatterKit_TimeIntervalFormatter
+#define COCOAPODS_VERSION_MAJOR_FormatterKit_TimeIntervalFormatter 1
+#define COCOAPODS_VERSION_MINOR_FormatterKit_TimeIntervalFormatter 8
+#define COCOAPODS_VERSION_PATCH_FormatterKit_TimeIntervalFormatter 0
+
+// FormatterKit/URLRequestFormatter
+#define COCOAPODS_POD_AVAILABLE_FormatterKit_URLRequestFormatter
+#define COCOAPODS_VERSION_MAJOR_FormatterKit_URLRequestFormatter 1
+#define COCOAPODS_VERSION_MINOR_FormatterKit_URLRequestFormatter 8
+#define COCOAPODS_VERSION_PATCH_FormatterKit_URLRequestFormatter 0
+
+// FormatterKit/UnitOfInformationFormatter
+#define COCOAPODS_POD_AVAILABLE_FormatterKit_UnitOfInformationFormatter
+#define COCOAPODS_VERSION_MAJOR_FormatterKit_UnitOfInformationFormatter 1
+#define COCOAPODS_VERSION_MINOR_FormatterKit_UnitOfInformationFormatter 8
+#define COCOAPODS_VERSION_PATCH_FormatterKit_UnitOfInformationFormatter 0
 
 // Google-Mobile-Ads-SDK
 #define COCOAPODS_POD_AVAILABLE_Google_Mobile_Ads_SDK
 #define COCOAPODS_VERSION_MAJOR_Google_Mobile_Ads_SDK 7
 #define COCOAPODS_VERSION_MINOR_Google_Mobile_Ads_SDK 1
 #define COCOAPODS_VERSION_PATCH_Google_Mobile_Ads_SDK 0
+
+// MBProgressHUD
+#define COCOAPODS_POD_AVAILABLE_MBProgressHUD
+#define COCOAPODS_VERSION_MAJOR_MBProgressHUD 0
+#define COCOAPODS_VERSION_MINOR_MBProgressHUD 9
+#define COCOAPODS_VERSION_PATCH_MBProgressHUD 1
 
 // MKNetworkKit
 #define COCOAPODS_POD_AVAILABLE_MKNetworkKit
@@ -78,11 +120,41 @@
 #define COCOAPODS_VERSION_MINOR_MagicalRecord_Shorthand 2
 #define COCOAPODS_VERSION_PATCH_MagicalRecord_Shorthand 0
 
+// Parse
+#define COCOAPODS_POD_AVAILABLE_Parse
+#define COCOAPODS_VERSION_MAJOR_Parse 1
+#define COCOAPODS_VERSION_MINOR_Parse 7
+#define COCOAPODS_VERSION_PATCH_Parse 4
+
+// ParseCrashReporting
+#define COCOAPODS_POD_AVAILABLE_ParseCrashReporting
+#define COCOAPODS_VERSION_MAJOR_ParseCrashReporting 1
+#define COCOAPODS_VERSION_MINOR_ParseCrashReporting 7
+#define COCOAPODS_VERSION_PATCH_ParseCrashReporting 4
+
+// ParseFacebookUtils
+#define COCOAPODS_POD_AVAILABLE_ParseFacebookUtils
+#define COCOAPODS_VERSION_MAJOR_ParseFacebookUtils 1
+#define COCOAPODS_VERSION_MINOR_ParseFacebookUtils 7
+#define COCOAPODS_VERSION_PATCH_ParseFacebookUtils 4
+
+// ParseUI
+#define COCOAPODS_POD_AVAILABLE_ParseUI
+#define COCOAPODS_VERSION_MAJOR_ParseUI 1
+#define COCOAPODS_VERSION_MINOR_ParseUI 1
+#define COCOAPODS_VERSION_PATCH_ParseUI 4
+
 // Reachability
 #define COCOAPODS_POD_AVAILABLE_Reachability
 #define COCOAPODS_VERSION_MAJOR_Reachability 3
 #define COCOAPODS_VERSION_MINOR_Reachability 1
 #define COCOAPODS_VERSION_PATCH_Reachability 1
+
+// UIImageEffects
+#define COCOAPODS_POD_AVAILABLE_UIImageEffects
+#define COCOAPODS_VERSION_MAJOR_UIImageEffects 0
+#define COCOAPODS_VERSION_MINOR_UIImageEffects 0
+#define COCOAPODS_VERSION_PATCH_UIImageEffects 1
 
 // iRate
 #define COCOAPODS_POD_AVAILABLE_iRate

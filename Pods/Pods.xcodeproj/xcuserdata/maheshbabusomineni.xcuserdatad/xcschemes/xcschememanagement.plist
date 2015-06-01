@@ -19,6 +19,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-GameFramework-FormatterKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-GameFramework-MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-GameFramework-MKNetworkKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -29,7 +39,32 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-GameFramework-Parse.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-GameFramework-ParseCrashReporting.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-GameFramework-ParseFacebookUtils.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-GameFramework-ParseUI.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-GameFramework-Reachability.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-GameFramework-UIImageEffects.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -52,47 +87,82 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>006101B63A8C099AE503538C</key>
+		<key>0F821811D1FD9FD2700B2489</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>05F87D5A4BD0841E4421A388</key>
+		<key>105C51BBF30FE1EBA72BCA6B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>238C8DE074520A2B0F7CCD13</key>
+		<key>1F88FBD246D2857FC70EFFDD</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2E1CBBACBB7C919AA0A2CB56</key>
+		<key>2502573F34172FFA9A6147F1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4AF9A317619A45A7EC1F947A</key>
+		<key>35230FA73673D942A73CDD0D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4D0AB1D7B6E6A02020C344F6</key>
+		<key>3DCDB8EA323E676C83960B91</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7F8F9C2841B2DAF3A887DB72</key>
+		<key>4FFEB3EFF96E086652657AA9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B6C0D55BCFA12942D42EC51F</key>
+		<key>63862C8F9AE12AB32B254BAE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CCC7C559EECD85E8EF217A72</key>
+		<key>69AF7D28BE450BC101DFBF90</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>929203330CD91F6726FEDADB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ACD86622C4DDEF5A4233FDCB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BD50E1A247F6A371EF994581</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CE82AB3F61DCDFD7BF64EC03</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D9F68BA844BB90A9396F858A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F0AFB22A4A86C721395B7481</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F2D3735350B38D38DE9D284F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

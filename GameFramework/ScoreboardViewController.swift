@@ -111,8 +111,8 @@ class ScoreboardViewController: BaseViewController,UIPickerViewDataSource, UIPic
     @IBAction func saveButtonClick(sender:UIButton){
         
         
-        //MatchEntityModel.saveMatchToDatabase(GlobalSingleton.sharedInstance.getRootMatch())
-        showPickerInActionSheet("asf")
+        MatchEntityModel.saveMatchToDatabase(GlobalSingleton.sharedInstance.getRootMatch())
+        //showPickerInActionSheet("asf")
         
     }
     //MARK: Pickert view delegate methods
