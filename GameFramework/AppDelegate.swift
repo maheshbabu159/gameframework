@@ -18,6 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         // Override point for customization after application launch.
+        Parse.setApplicationId("I4CiQfydHxh0z5uZaV8te5SPtr3201hLY6FLNkYX", clientKey: "VRM2SBaB5hCkxZI0iwICXLZyPAAGDTkTbMu5tcjA")
+
+        PFUser.enableAutomaticUser()
+        
+        // Override point for customization after application launch.
         //Set up magical record
         MagicalRecord.setupCoreDataStack();
         
@@ -36,9 +41,208 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             println(levelEntity.home_team_tries)
         }
-        
     
+       
+      
+        
+        
+        var user = PFUser()
+        user.username = "Mahesh"
+        user.password = "password"
+        user.email = "mahesh.somineni@senecaglobal.com"
+        
+        
+        user.signUpInBackgroundWithBlock {
+            (succeeded: Bool, error: NSError?) -> Void in
+            
+            if let error = error {
+                
+                let errorString = error.userInfo?["error"] as? NSString
+                // Show the errorString somewhere and let the user try again.
+                // Hooray! Let them use the app now.
+                
+                PFUser.logInWithUsernameInBackground("Mahesh", password:"password") {
+                    (user: PFUser?, error: NSError?) -> Void in
+                    if user != nil {
+                        
+                        // Do stuff after successful login.
+                        NSLog("Login sucess.")
+                        
+                        
+                        var newPost = PFObject(className:"Post")
+                        // Create a new Post object and create relationship with PFUser
+                        newPost["textContent"] = "iPhone Application Development Training"
+                        newPost["author"] = PFUser.currentUser()["username"]
+                        
+                        var postACL = PFACL(user: user)
+                        postACL.setPublicReadAccess(true)
+                        postACL.setPublicWriteAccess(true)
+                        newPost.ACL = postACL
+                        
+                        newPost.saveInBackgroundWithBlock {(success: Bool, error: NSError?) -> Void in
+                            
+                            
+                            let query = PFQuery(className: "Post")
+                            query.whereKey("author", equalTo:PFUser.currentUser()["username"])
+                            query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
+                                
+                                if error == nil {
+                                    
+                                    // Query Succeeded - continue your app logic here.
+                                    
+                                } else {
+                                    
+                                    // Query Failed - handle an error.
+                                    
+                                    
+                                }
+                                
+                                
+                                
+                            }
+                        }
+                        
+                        
+                        
+                    } else {
+                        
+                        NSLog("Login failur.")
+                        
+                        // The login failed. Check error to see why.
+                    }
+                }
+                
+
+                
+            } else {
+                
+                
+                // Hooray! Let them use the app now.
+                
+                PFUser.logInWithUsernameInBackground("Mahesh", password:"password") {
+                    (user: PFUser?, error: NSError?) -> Void in
+                    if user != nil {
+                        
+                        // Do stuff after successful login.
+                        NSLog("Login sucess.")
+                        
+                        
+                        var newPost = PFObject(className:"Post")
+                        // Create a new Post object and create relationship with PFUser
+                        newPost["textContent"] = "iPhone Application Development Training"
+                        newPost["author"] = PFUser.currentUser()["username"]
+                        
+                        var postACL = PFACL(user: user)
+                        postACL.setPublicReadAccess(true)
+                        postACL.setPublicWriteAccess(true)
+                        newPost.ACL = postACL
+                        
+                        newPost.saveInBackgroundWithBlock {(success: Bool, error: NSError?) -> Void in
+                            
+                            
+                            let query = PFQuery(className: "Post")
+                            query.whereKey("author", equalTo:PFUser.currentUser()["username"])
+                            query.findObjectsInBackgroundWithBlock { (objects: [AnyObject]!, error: NSError!) -> Void in
+                                
+                                if error == nil {
+                                    
+                                    // Query Succeeded - continue your app logic here.
+                                    
+                                } else {
+                                    
+                                    // Query Failed - handle an error.
+                                    
+                                    
+                                }
+                                
+                                
+                                
+                            }
+                        }
+                        
+                        
+                        
+                    } else {
+                        
+                        NSLog("Login failur.")
+                        
+                        // The login failed. Check error to see why.
+                    }
+                }
+
+            }
+        }
+        
+ 
+        
+        
+        
+        
         return true
+    }
+    
+    func login(){
+        
+        
+        PFUser.logInWithUsernameInBackground("maheshbabu", password:"Qwerty!23456") {
+            (user: PFUser?, error: NSError?) -> Void in
+            if user != nil {
+                // Do stuff after successful login.
+                NSLog("Login sucess.")
+
+                
+            } else {
+                
+                NSLog("Login failur.")
+
+                // The login failed. Check error to see why.
+            }
+        }
+    }
+    func swiftOperationsAndExamples(){
+        
+        //Saving an object
+        var gameScore = PFObject(className: "GameScore")
+        gameScore.setObject(1337, forKey: "score")
+        gameScore.setObject("Sean Plott", forKey: "playerName")
+        gameScore.saveInBackgroundWithBlock {
+            (success: Bool!, error: NSError!) -> Void in
+            if (success != nil) {
+                
+                NSLog("Object created with id: (gameScore.objectId)")
+                
+            } else {
+                
+                NSLog("%@", error)
+            }
+        }
+        
+        
+        
+        //User registration
+        var user = PFUser()
+        user.username = "maheshbabu"
+        user.password = "Qwerty!23456"
+        user.email = "mahesh.somineni@senecaglobal.com"
+        // other fields can be set just like with PFObject
+        user["phone"] = "8464966798"
+        
+        user.signUpInBackgroundWithBlock {
+            (succeeded: Bool, error: NSError?) -> Void in
+          
+            if let error = error {
+                
+                let errorString = error.userInfo?["error"] as? NSString
+                // Show the errorString somewhere and let the user try again.
+                
+                
+            } else {
+                
+                
+                // Hooray! Let them use the app now.
+            }
+        }
+        
     }
 
     func applicationWillResignActive(application: UIApplication) {

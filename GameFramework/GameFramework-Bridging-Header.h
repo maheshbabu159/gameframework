@@ -8,7 +8,11 @@
 
 #ifndef GameFramework_GameFramework_Bridging_Header_h
 #define GameFramework_GameFramework_Bridging_Header_h
+#import <Parse/Parse.h>
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 
 #define MR_SHORTHAND
 #import <CoreData+MagicalRecord.h>
+
+
 #endif

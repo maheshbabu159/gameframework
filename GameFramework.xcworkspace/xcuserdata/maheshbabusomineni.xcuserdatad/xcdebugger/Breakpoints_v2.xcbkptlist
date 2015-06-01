@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Pods/MagicalRecord/MagicalRecord/Core/MagicalRecord+Setup.m"
-            timestampString = "452073836.675522"
+            filePath = "GameFramework/GlobalSettings.swift"
+            timestampString = "452075248.501886"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "+setupCoreDataStackWithStoreNamed:"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
+            landmarkName = "addDefaultData()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GameFramework/AppDelegate.swift"
-            timestampString = "452075121.141229"
+            timestampString = "454859578.288918"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
+            startingLineNumber = "208"
+            endingLineNumber = "208"
+            landmarkName = "swiftOperationsAndExamples()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +41,45 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GameFramework/GlobalSettings.swift"
-            timestampString = "452075248.501886"
+            filePath = "GameFramework/AppDelegate.swift"
+            timestampString = "454859578.288918"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
-            landmarkName = "addDefaultData()"
+            startingLineNumber = "216"
+            endingLineNumber = "216"
+            landmarkName = "swiftOperationsAndExamples()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GameFramework/AppDelegate.swift"
+            timestampString = "454859578.288918"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "197"
+            endingLineNumber = "197"
+            landmarkName = "login()"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GameFramework/AppDelegate.swift"
+            timestampString = "454859669.82824"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
