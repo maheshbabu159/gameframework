@@ -19,7 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Override point for customization after application launch.
         Parse.setApplicationId("I4CiQfydHxh0z5uZaV8te5SPtr3201hLY6FLNkYX", clientKey: "VRM2SBaB5hCkxZI0iwICXLZyPAAGDTkTbMu5tcjA")
-
+        PFFacebookUtils.initializeFacebook()
+         PFTwitterUtils.initializeWithConsumerKey("3Q9hMEKqqSg4ie2pibZ2sVJuv", consumerSecret: "IEZ9wv2d1EpXNGFKGp7sAGdxRtyqtPwygyciFZwTHTGhPp4FMj")
+        
         PFUser.enableAutomaticUser()
         
         // Override point for customization after application launch.
@@ -44,6 +46,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
        
       
+        
+        
+        
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
+          
+            self.setupTestData()
+        }
+        
+        
+        
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window?.rootViewController = UINavigationController(rootViewController: UIDemoViewController())
+        window?.makeKeyAndVisible()
+
+        return true
+    }
+    
+    func oneToManyRelation(){
+        
+        
+        
         
         
         var user = PFUser()
@@ -112,7 +135,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     }
                 }
                 
-
+                
                 
             } else {
                 
@@ -169,17 +192,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                         // The login failed. Check error to see why.
                     }
                 }
-
+                
             }
         }
         
- 
         
         
-        
-        
-        return true
+
     }
+    
     
     func login(){
         
@@ -243,6 +264,62 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+    }
+    
+    // MARK: Test Data
+    
+    private func setupTestData() {
+        let todoTitles = [
+            "Build Parse",
+            "Make everything awesome",
+            "Go out for the longest run",
+            "Do more stuff",
+            "Conquer the world",
+            "Build a house",
+            "Grow a tree",
+            "Be awesome",
+            "Setup an app",
+            "Do stuff",
+            "Buy groceries",
+            "Wash clothes"
+        ];
+        
+        var objects: [PFObject] = Array()
+        
+        let query = PFQuery(className: "Todo")
+        if let todos = query.findObjects() as? [PFObject] {
+            if todos.count == 0 {
+                for (index, title) in enumerate(todoTitles) {
+                    let todo = PFObject(className: "Todo")
+                    todo["title"] = title
+                    todo["priority"] = index % 3
+                    objects.append(todo)
+                }
+            }
+        }
+        
+        let appNames = [ "Anypic", "Anywall", "f8" ]
+        let appsQuery = PFQuery(className: "App")
+        if let apps = appsQuery.findObjects() as? [PFObject] {
+            if apps.count == 0 {
+                for (index, appName) in enumerate(appNames) {
+                    let bundle = NSBundle.mainBundle()
+                    if let filePath = bundle.pathForResource(String(index), ofType: "png") {
+                        if let data = NSData(contentsOfFile: filePath) {
+                            let file = PFFile(name: filePath.lastPathComponent, data: data)
+                            let object = PFObject(className: "App")
+                            object["icon"] = file
+                            object["name"] = appName
+                            objects.append(object)
+                        }
+                    }
+                }
+            }
+        }
+        
+        if objects.count != 0 {
+            PFObject.saveAll(objects)
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {

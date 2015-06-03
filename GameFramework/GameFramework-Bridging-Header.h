@@ -10,6 +10,7 @@
 #define GameFramework_GameFramework_Bridging_Header_h
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
+#import <ParseUI/ParseUI.h>
 
 #define MR_SHORTHAND
 #import <CoreData+MagicalRecord.h>
