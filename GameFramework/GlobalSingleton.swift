@@ -58,9 +58,7 @@ class GlobalSingleton {
     
     func getCurrentLevel()->Int{
         
-        
         return GlobalVariables.globalUserDefaults.integerForKey(GlobalVariables.user_defaults_current_level_key);
-        
         
     }
     
@@ -70,7 +68,6 @@ class GlobalSingleton {
         GlobalVariables.globalUserDefaults.setInteger(current_level,forKey:GlobalVariables.user_defaults_current_level_key)
         
         NSUserDefaults.standardUserDefaults().synchronize()
-        
         
         
     }

@@ -21,6 +21,7 @@ enum ButtonTags: Int {
 }
 
 enum BBPhoto1: Int {
+    
     case kommunen = 10
     case sagsbehandler = 20
     case festen = 30

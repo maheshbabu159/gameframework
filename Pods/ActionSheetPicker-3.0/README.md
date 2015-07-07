@@ -1,10 +1,9 @@
-[![Build Status](https://travis-ci.org/skywinder/ActionSheetPicker-3.0.svg?branch=master)](https://travis-ci.org/skywinder/ActionSheetPicker-3.0)
 [![Version](http://img.shields.io/cocoapods/v/ActionSheetPicker-3.0.svg)](http://cocoadocs.org/docsets/ActionSheetPicker-3.0)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-
+[![Build Status](https://travis-ci.org/skywinder/ActionSheetPicker-3.0.svg?branch=master)](https://travis-ci.org/skywinder/ActionSheetPicker-3.0)
+[![Issues](http://img.shields.io/github/issues/skywinder/ActionSheetPicker-3.0.svg)](https://github.com/skywinder/ActionSheetPicker-3.0/issues?state=open)
 [![License](https://img.shields.io/cocoapods/l/ActionSheetPicker-3.0.svg)](http://cocoadocs.org/docsets/ActionSheetPicker-3.0)
 [![Platform](https://img.shields.io/cocoapods/p/ActionSheetPicker-3.0.svg)](http://cocoadocs.org/docsets/ActionSheetPicker-3.0)
-[![Issues](http://img.shields.io/github/issues/skywinder/ActionSheetPicker-3.0.svg)](https://github.com/skywinder/ActionSheetPicker-3.0/issues?state=open)
 
 ActionSheetPicker-3.0
 ==================
@@ -23,7 +22,7 @@ ActionSheetPicker-3.0
 
 Please welcome: **ActionSheetPicker-3.0**!
 
-`pod 'ActionSheetPicker-3.0', '~> 1.6.1'` (**iOS 5.1.1-8.x** compatible!)
+`pod 'ActionSheetPicker-3.0', '~> 1.5.1'` (**iOS 5.1.1-8.x** compatible!)
 
 Improvements more than welcome - they are kindly requested :)
 
@@ -56,8 +55,6 @@ There are 4 distinct picker view options: `ActionSheetStringPicker`, `ActionShee
 
 ### Basic Usage ##
 
-For detailed examples, please look [Wiki-page](https://github.com/skywinder/ActionSheetPicker-3.0/wiki/Basic-Usage) and check [Example Projects](#example-projects) in this repo.
-
 ```obj-c
 // Inside a IBAction method:
 
@@ -78,7 +75,14 @@ NSArray *colors = [NSArray arrayWithObjects:@"Red", @"Green", @"Blue", @"Orange"
                                       origin:sender];
 // You can also use self.view if you don't have a sender
 ```
+For detailed examples, please check [Example Projects](#example-projects) in this repo.
 
+About other customisations, please look  [Wiki-page](https://github.com/skywinder/ActionSheetPicker-3.0/wiki/Basic-Usage):
+
+- custom buttons view
+- custom buttons callbacks
+- Action by clicking outside of the picker
+- Other customisations
  
 ##Installation##
 
@@ -163,6 +167,9 @@ Here is 4 projects:
 
 
 ## [Apps using this library](https://github.com/skywinder/ActionSheetPicker-3.0/wiki/Apps-using-ActionSheetPicker-3.0) 
+
+If you've used this project in a live app, please let me know! Nothing makes me happier than seeing someone else take my work and go wild with it.
+
 *If you are using `ActionSheetPicker-3.0` in your app or know of an app that uses it, please add it to [this] (https://github.com/skywinder/ActionSheetPicker-3.0/wiki/Apps-using-ActionSheetPicker-3.0) list.*
 
 ## Maintainer and Contributor

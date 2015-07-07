@@ -1,5 +1,4 @@
-
-target 'GameFramework' do
+platform :ios, '7.0'
 
 pod 'MKNetworkKit'
 pod "MagicalRecord/Shorthand"
@@ -16,7 +15,6 @@ pod 'MBProgressHUD'
 pod 'Reachability'
 pod 'FormatterKit'
 pod 'UIImageEffects'
-
-end
-
- 
+pod 'AFNetworking', '~> 2.5'
+pod 'ICDMaterialActivityIndicatorView', '0.0.2'
+pod 'JBChartView'

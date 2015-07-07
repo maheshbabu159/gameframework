@@ -12,7 +12,6 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
     
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -20,61 +19,97 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         Parse.setApplicationId("I4CiQfydHxh0z5uZaV8te5SPtr3201hLY6FLNkYX", clientKey: "VRM2SBaB5hCkxZI0iwICXLZyPAAGDTkTbMu5tcjA")
         PFFacebookUtils.initializeFacebook()
-         PFTwitterUtils.initializeWithConsumerKey("3Q9hMEKqqSg4ie2pibZ2sVJuv", consumerSecret: "IEZ9wv2d1EpXNGFKGp7sAGdxRtyqtPwygyciFZwTHTGhPp4FMj")
+        PFTwitterUtils.initializeWithConsumerKey("3Q9hMEKqqSg4ie2pibZ2sVJuv", consumerSecret: "IEZ9wv2d1EpXNGFKGp7sAGdxRtyqtPwygyciFZwTHTGhPp4FMj")
         
         PFUser.enableAutomaticUser()
         
+
+        //Change the application level navigation bar color
+        UINavigationBar.appearance().barTintColor = GlobalSettings.RGBColor(GlobalVariables.yellow_color)
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+
         // Override point for customization after application launch.
         //Set up magical record
         MagicalRecord.setupCoreDataStack();
         
         //Initialize global singleton
         GlobalSingleton.sharedInstance
-        //let levelsArray = MatchEntity.createEntity() as MatchEntity
-
-        let levelsArray = MatchEntity.findAll() as [MatchEntity]
-        //let location = MatchEntity.createEntity() as MatchEntity
-
-        //let levelEntity = levelsArray[1]
-        
-        //println(levelEntity.level_number)
-        
-        for levelEntity in levelsArray{
-            
-            println(levelEntity.home_team_tries)
-        }
     
-       
-      
-        
-        
-        
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-          
-            self.setupTestData()
-        }
-        
-        
-        
-        window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        window?.rootViewController = UINavigationController(rootViewController: UIDemoViewController())
-        window?.makeKeyAndVisible()
 
         return true
     }
     
+    func serviceCall(){
+       
+        
+        let jsonString:NSString = "{\"username\":\"maurice\",\"password\":\"maurice\"}";
+      
+        var url = "https://api.parse.com/1/functions/Login"
+        var remoteUrl : NSURL? = NSURL(string: url)
+        
+        //var url = NSURL(fileURLWithPath: "https://api.parse.com/1/functions/Login")
+        
+        var request:NSMutableURLRequest = NSMutableURLRequest(URL: remoteUrl!)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.setValue("ORY7BYT28z07dlH1rdlZoJyL2PUOiszHBItyMVSb", forHTTPHeaderField: "X-Parse-Application-Id")
+        request.setValue("ZvJyc70WKYorqXsJ4DYE649JwPKJ5YEL6TilZfn5", forHTTPHeaderField: "X-Parse-REST-API-Key")
+        request.setValue("\(jsonString.length)", forHTTPHeaderField: "Content-Length")
+        request.HTTPMethod = "POST"
+        request.HTTPBody = (jsonString as NSString).dataUsingEncoding(NSUTF8StringEncoding)
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler:{
+            ( response:NSURLResponse!,  data:NSData!, error:NSError!) -> Void in
+            
+            let resstr = NSString(data: data, encoding: NSUTF8StringEncoding)
+            
+            
+            
+            println( "JSON:  \(resstr)")
+        })
+        
+        /*let jsonString:NSString = "{\"username\":\"maurice\",\"password\":\"maurice\"}";
+    
+        let manager = AFHTTPRequestOperationManager()
+
+        println( "JSON:  \(jsonString.length)") //print the good thing
+        
+        var headersDictionary:NSDictionary =  ["Content-Type": "application/json", "X-Parse-Application-Id": "ORY7BYT28z07dlH1rdlZoJyL2PUOiszHBItyMVSb","X-Parse-REST-API-Key":"ZvJyc70WKYorqXsJ4DYE649JwPKJ5YEL6TilZfn5"]
+        
+        manager.securityPolicy.allowInvalidCertificates = true;
+        manager.POST("https://api.parse.com/1/functions/Login", parameters: nil,
+            constructingBodyWithBlock: { (formData: AFMultipartFormData!) -> Void in
+                
+                //code
+                formData.appendPartWithHeaders(headersDictionary, body:  (jsonString as NSString).dataUsingEncoding(NSUTF8StringEncoding))
+
+                formData.appendPartWithHeaders(headersDictionary, body:  (jsonString as NSString).dataUsingEncoding(NSUTF8StringEncoding))
+                
+            } ,
+            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
+                
+                println( "JSON:  \(responseObject.description)") //print the good thing
+                
+            },
+            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
+                
+                println( "Error: \(error.localizedDescription)") //print the good thing
+                
+            }
+        )*/
+
+    }
+
+
+
     func oneToManyRelation(){
-        
-        
-        
-        
-        
+
         var user = PFUser()
         user.username = "Mahesh"
         user.password = "password"
         user.email = "mahesh.somineni@senecaglobal.com"
-        
-        
+
+
         user.signUpInBackgroundWithBlock {
             (succeeded: Bool, error: NSError?) -> Void in
             

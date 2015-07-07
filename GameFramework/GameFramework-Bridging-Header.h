@@ -11,9 +11,12 @@
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import <ParseUI/ParseUI.h>
-
+#import <MKNetworkKit/MKNetworkKit.h>
+#import <AFNetworking/AFNetworking.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 #define MR_SHORTHAND
 #import <CoreData+MagicalRecord.h>
-
-
+#import "JBChartView/JBChartView.h"
+#import "JBChartView/JBBarChartView.h"
+#import "JBChartView/JBLineChartView.h"
 #endif

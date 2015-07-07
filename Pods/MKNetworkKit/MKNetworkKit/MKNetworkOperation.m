@@ -1037,6 +1037,7 @@ OSStatus extractIdentityAndTrust(CFDataRef inPKCS12Data,        // 5
             // Cert not trusted, but user is OK with that
             DLog(@"Certificate is not trusted, but self.shouldContinueWithInvalidCertificate is YES");
             [challenge.sender useCredential:[NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust] forAuthenticationChallenge:challenge];
+              
           } else {
             
             DLog(@"Certificate is not trusted, continuing without credentials. Might result in 401 Unauthorized");
