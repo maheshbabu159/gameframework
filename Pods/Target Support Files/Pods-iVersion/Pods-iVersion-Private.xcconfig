@@ -1,0 +1,6 @@
+#include "Pods-iVersion.xcconfig"
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers/Private" "${PODS_ROOT}/Headers/Private/iVersion" "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/AFNetworking" "${PODS_ROOT}/Headers/Public/ActionSheetPicker-3.0" "${PODS_ROOT}/Headers/Public/Bolts" "${PODS_ROOT}/Headers/Public/Facebook-iOS-SDK" "${PODS_ROOT}/Headers/Public/Facebook-iOS-SDK/FacebookSDK" "${PODS_ROOT}/Headers/Public/FormatterKit" "${PODS_ROOT}/Headers/Public/Google-Mobile-Ads-SDK" "${PODS_ROOT}/Headers/Public/ICDMaterialActivityIndicatorView" "${PODS_ROOT}/Headers/Public/JBChartView" "${PODS_ROOT}/Headers/Public/MBProgressHUD" "${PODS_ROOT}/Headers/Public/MKNetworkKit" "${PODS_ROOT}/Headers/Public/MKNetworkKit/Categories" "${PODS_ROOT}/Headers/Public/MagicalRecord" "${PODS_ROOT}/Headers/Public/Parse" "${PODS_ROOT}/Headers/Public/ParseCrashReporting" "${PODS_ROOT}/Headers/Public/ParseFacebookUtils" "${PODS_ROOT}/Headers/Public/ParseUI" "${PODS_ROOT}/Headers/Public/Reachability" "${PODS_ROOT}/Headers/Public/UIImageEffects" "${PODS_ROOT}/Headers/Public/iRate" "${PODS_ROOT}/Headers/Public/iVersion"
+OTHER_LDFLAGS = ${PODS_IVERSION_OTHER_LDFLAGS} -ObjC
+PODS_ROOT = ${SRCROOT}
+SKIP_INSTALL = YES
