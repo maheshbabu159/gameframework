@@ -1,0 +1,6 @@
+framework module PNChartSwift {
+  umbrella header "Pods-ExecutiveDashboard-PNChartSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
