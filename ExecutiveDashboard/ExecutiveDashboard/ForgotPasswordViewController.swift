@@ -42,6 +42,11 @@ class ForgotPasswordViewController: UIViewController {
         
         delegate?.toggleLeftPanel?()
     }
+    @IBAction func cancelButtonClick(sender: AnyObject) {
+        
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+
     @IBAction func forgotPasswordButtonClick(sender: AnyObject) {
         
         

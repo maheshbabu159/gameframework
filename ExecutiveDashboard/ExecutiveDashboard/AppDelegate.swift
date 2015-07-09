@@ -8,6 +8,7 @@
 
 import UIKit
 import MagicalRecord
+import AFNetworking
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,7 +30,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Initialize global singleton
         GlobalSingleton.sharedInstance
-    
 
         return true
     }

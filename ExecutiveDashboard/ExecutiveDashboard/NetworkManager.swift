@@ -8,9 +8,34 @@
 
 import UIKit
 import MBProgressHUD
+import AFNetworking
 
 class NetworkManager: NSObject {
    
+    
+    class func initAFNetworkManager()-> AFHTTPRequestOperationManager {
+    
+        
+        // initialize manager
+        let manager = AFHTTPRequestOperationManager()
+        manager.requestSerializer = AFJSONRequestSerializer()
+        
+        // set headers
+        manager.requestSerializer.setValue(GlobalVariables.request_content_type_value, forHTTPHeaderField: GlobalVariables.request_content_type_key)
+        manager.requestSerializer.setValue(GlobalVariables.x_parse_application_id_value, forHTTPHeaderField: GlobalVariables.x_parse_application_id_key)
+        manager.requestSerializer.setValue(GlobalVariables.x_parse_rest_api_value, forHTTPHeaderField: GlobalVariables.x_parse_rest_api_key)
+        
+        return manager
+    }
+    class func getRootDictionaryFromResponseObject(responseObject: AnyObject)-> AnyObject! {
+        
+        var responseString: NSString = responseObject.description
+        var data = responseString.dataUsingEncoding(NSUTF8StringEncoding)
+        var localError: NSError?
+        var jsonDictionary: AnyObject! = NSJSONSerialization.JSONObjectWithData(data!, options: NSJSONReadingOptions.MutableContainers, error: &localError)
+        return jsonDictionary
+    }
+    
     // MARK: Creating request object
     class func getRequestObject(apiMethod:NSString, bodyData:NSString)-> NSMutableURLRequest {
     
@@ -48,6 +73,7 @@ class NetworkManager: NSObject {
                 progressHUD.hide(true)
                 
                 let resstr = NSString(data: data, encoding: NSUTF8StringEncoding)
+                
                 
                 println(resstr)
                 
@@ -154,7 +180,6 @@ class NetworkManager: NSObject {
             let progressHUD = MBProgressHUD.showHUDAddedTo(viewController.view, animated: true)
             progressHUD.labelText = "Loading..."
             
-            
             NSURLConnection.sendAsynchronousRequest(NetworkManager.getRequestObject(apiMethod, bodyData:bodyData ), queue: NSOperationQueue.mainQueue(), completionHandler:{
                 ( response:NSURLResponse!,  data:NSData!, error:NSError!) -> Void in
                 
@@ -181,7 +206,13 @@ class NetworkManager: NSObject {
                     var sessionId:NSString = GlobalVariables.globalUserDefaults.valueForKey(GlobalVariables.user_defaults_session_id_key) as! NSString
                     let jsonString:NSString = "{\"sessionId\":\"\(sessionId)\"}"
                     
-                    var aPersonDictionary = ["sessionId":"\(sessionId)", "fromYear":2015, "fromMonth":2, "toYear":2015, "toMonth":5]
+                    var fromMonth:Int = GlobalVariables.globalUserDefaults.integerForKey(GlobalVariables.user_defaults_from_month_key)
+                    var fromYear:Int = GlobalVariables.globalUserDefaults.integerForKey(GlobalVariables.user_defaults_from_year_key)
+                    var toMonth:Int = GlobalVariables.globalUserDefaults.integerForKey(GlobalVariables.user_defaults_to_month_key)
+                    var toYear:Int = GlobalVariables.globalUserDefaults.integerForKey(GlobalVariables.user_defaults_to_year_key)
+                    
+                    
+                    var aPersonDictionary = ["sessionId":"\(sessionId)", "fromYear":fromYear, "fromMonth":fromMonth, "toYear":toYear, "toMonth":toMonth]
                     var bytes = NSJSONSerialization.dataWithJSONObject(aPersonDictionary, options: NSJSONWritingOptions.allZeros, error: nil)
                     let resstr = NSString(data:bytes!, encoding: NSUTF8StringEncoding)
                     
@@ -254,19 +285,21 @@ class NetworkManager: NSObject {
                     
                     var sessionId:NSString = GlobalVariables.globalUserDefaults.valueForKey(GlobalVariables.user_defaults_session_id_key) as! NSString
                     let jsonString:NSString = "{\"sessionId\":\"\(sessionId)\"}"
+                
+                    var fromMonth:Int = GlobalVariables.globalUserDefaults.integerForKey(GlobalVariables.user_defaults_from_month_key)
+                    var fromYear:Int = GlobalVariables.globalUserDefaults.integerForKey(GlobalVariables.user_defaults_from_year_key)
+                    var toMonth:Int = GlobalVariables.globalUserDefaults.integerForKey(GlobalVariables.user_defaults_to_month_key)
+                    var toYear:Int = GlobalVariables.globalUserDefaults.integerForKey(GlobalVariables.user_defaults_to_year_key)
                     
-                    var aPersonDictionary = ["sessionId":"\(sessionId)", "fromYear":2015, "fromMonth":2, "toYear":2015, "toMonth":5]
+                    
+                    var aPersonDictionary = ["sessionId":"\(sessionId)", "fromYear":fromYear, "fromMonth":fromMonth, "toYear":toYear, "toMonth":toMonth]
+                    
                     var bytes = NSJSONSerialization.dataWithJSONObject(aPersonDictionary, options: NSJSONWritingOptions.allZeros, error: nil)
                     let resstr = NSString(data:bytes!, encoding: NSUTF8StringEncoding)
                     
                     
-                    //Call Other servicess for getting remaining data
-                    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
-                        
-                        
-                        self.getRevenueServiceCall(GlobalVariables.RequestAPIMethods.GetRevenue.rawValue, bodyData: resstr!, viewController: viewController)
-
-                    }
+                    self.getRevenueServiceCall(GlobalVariables.RequestAPIMethods.GetRevenue.rawValue, bodyData: resstr!, viewController: viewController)
+          
                     
                 }else{
                     
@@ -326,7 +359,14 @@ class NetworkManager: NSObject {
                     var sessionId:NSString = GlobalVariables.globalUserDefaults.valueForKey(GlobalVariables.user_defaults_session_id_key) as! NSString
                     let jsonString:NSString = "{\"sessionId\":\"\(sessionId)\"}"
                     
-                    var aPersonDictionary = ["sessionId":"\(sessionId)", "fromYear":2015, "fromMonth":2, "toYear":2015, "toMonth":5]
+                    var fromMonth:Int = GlobalVariables.globalUserDefaults.integerForKey(GlobalVariables.user_defaults_from_month_key)
+                    var fromYear:Int = GlobalVariables.globalUserDefaults.integerForKey(GlobalVariables.user_defaults_from_year_key)
+                    var toMonth:Int = GlobalVariables.globalUserDefaults.integerForKey(GlobalVariables.user_defaults_to_month_key)
+                    var toYear:Int = GlobalVariables.globalUserDefaults.integerForKey(GlobalVariables.user_defaults_to_year_key)
+                    
+                    
+                    var aPersonDictionary = ["sessionId":"\(sessionId)", "fromYear":fromYear, "fromMonth":fromMonth, "toYear":toYear, "toMonth":toMonth]
+                    
                     var bytes = NSJSONSerialization.dataWithJSONObject(aPersonDictionary, options: NSJSONWritingOptions.allZeros, error: nil)
                     let resstr = NSString(data:bytes!, encoding: NSUTF8StringEncoding)
                     
@@ -568,6 +608,7 @@ class NetworkManager: NSObject {
                             }else{
                                 
                                 GlobalSettings.updateSignedInDefaultValue(false)
+                                GlobalSettings.updateRemeberMeDefaultValue(false)
                                 
                                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                                 let viewController:UIViewController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as! UIViewController
@@ -755,8 +796,12 @@ class NetworkManager: NSObject {
                                 
                             }else{
                                 
-                                
                                 println("Device registered")
+
+                                var sessionId:NSString = GlobalVariables.globalUserDefaults.valueForKey(GlobalVariables.user_defaults_session_id_key) as! NSString
+                                let jsonString:NSString = "{\"sessionId\":\"\(sessionId)\"}"
+                                self.getProfileDataServiceCall(GlobalVariables.RequestAPIMethods.GetProfile.rawValue, bodyData: jsonString, viewController: viewController)
+
                                 
                             }
                             

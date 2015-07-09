@@ -31,7 +31,10 @@ struct GlobalVariables {
     static let user_defaults_signed_in_key = "signedin"
     static let user_defaults_username_key = "username"
     static let user_defaults_password_key = "password"
-
+    static let user_defaults_from_month_key = "fromMonth"
+    static let user_defaults_to_month_key = "toMonth"
+    static let user_defaults_from_year_key = "fromYear"
+    static let user_defaults_to_year_key = "toYear"
     static let user_defaults_session_id_key = "session_id"
    
     

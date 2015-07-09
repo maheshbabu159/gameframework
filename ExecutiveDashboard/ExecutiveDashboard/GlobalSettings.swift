@@ -110,6 +110,39 @@ class GlobalSettings {
         
     }
     
+    class func updateFromYearDefaultValue(value : Int){
+        
+        
+        GlobalVariables.globalUserDefaults.setInteger(value, forKey: GlobalVariables.user_defaults_from_year_key)
+        
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+    }
+    class func updateToYearDefaultValue(value : Int){
+        
+        
+        GlobalVariables.globalUserDefaults.setInteger(value, forKey: GlobalVariables.user_defaults_to_year_key)
+        
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+    }
+    class func updateFromMonthDefaultValue(value : Int){
+        
+        
+        GlobalVariables.globalUserDefaults.setInteger(value, forKey: GlobalVariables.user_defaults_from_month_key)
+        
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+    }
+    class func updateToMonthDefaultValue(value : Int){
+        
+        
+        GlobalVariables.globalUserDefaults.setInteger(value, forKey: GlobalVariables.user_defaults_to_month_key)
+        
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+    }
+    
     class func updatePasswordDefaultValue(value : NSString){
         
         GlobalVariables.globalUserDefaults.setValue(value, forKey: GlobalVariables.user_defaults_password_key)
