@@ -161,7 +161,7 @@ class LoginViewController: BaseViewController  {
         let progressHUD = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         progressHUD.labelText = "Loading..."
         
-        manager.POST(GlobalVariables.request_url + (GlobalVariables.RequestAPIMethods.Login.rawValue as String),parameters: params,
+        manager.POST(GlobalVariables.request_url + (GlobalVariables.RequestAPIMethods.LoginCheck.rawValue as String),parameters: params,
         
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 

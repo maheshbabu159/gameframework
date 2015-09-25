@@ -13,9 +13,13 @@ struct GlobalVariables {
 
     static let globalUserDefaults = NSUserDefaults.standardUserDefaults()
 
+    static let globalSingleton =  GlobalSingleton.sharedInstance
+
     static let blue_color = "#4AB3EF"
     static let green_color = "#349840"
-    static let yellow_color = "#DF9100"
+    static let yellow_color = "#F55E3D"
+    
+    static let appName = "Hyderbad Training Institutes"
 
     //User defuals keys
     static let user_defaults_app_iteration_number_key = "app_iteration_number"
@@ -36,17 +40,22 @@ struct GlobalVariables {
     static let user_defaults_from_year_key = "fromYear"
     static let user_defaults_to_year_key = "toYear"
     static let user_defaults_session_id_key = "session_id"
-   
+    
+    static let user_defaults_city_id_key = "city"
+    static let user_defaults_course_id_key = "course"
+    static let user_defaults_user_id_key = "userId"
+    static let user_defaults_role_id_key = "roleId"
+
     
     
     //Service calls values
-    static let request_url = "https://api.parse.com/1/functions/"
+    static let request_url = "https://api.parse.com/1/functions/function"
 
     static let x_parse_application_id_key = "X-Parse-Application-Id"
-    static let x_parse_application_id_value = "ORY7BYT28z07dlH1rdlZoJyL2PUOiszHBItyMVSb"
+    static let x_parse_application_id_value = "I8pLOBgiTj7RgNDAKjBtPEFK7tkPVUyTUHX81ynL"
     
     static let x_parse_rest_api_key = "X-Parse-REST-API-Key"
-    static let x_parse_rest_api_value = "ZvJyc70WKYorqXsJ4DYE649JwPKJ5YEL6TilZfn5"
+    static let x_parse_rest_api_value = "puje6S1ykPiQZoZ1aSB53wrL4zMUK0uDjwlOTf4z"
 
     static let request_content_type_key = "Content-Type"
     static let request_content_type_value = "application/json"
@@ -58,17 +67,35 @@ struct GlobalVariables {
    
     enum RequestAPIMethods : NSString{
         
-        case Login = "Login"
+        case GetStudne = "getStudets"
         case RegisterDevice = "RegisterDevice"
-        case ForgotPassword = "ForgotPassword"
+        case ResetPassword = "resetPassword"
         case Logout = "Logout"
-        case ChangePassword = "ChangePassword"
+        case ChangePassword = "changePassword"
         case GetProfile = "GetProfile"
         case GetWebsiteVisits = "GetWebsiteVisits"
         case GetRevenue = "GetRevenue"
         case GetActiveProjects = "GetActiveProjects"
-
+        case LoginCheck = "loginCheck"
+        case GetInstitutesByCourseName = "getInstitutesByCourseName"
+        case GetAllUsers = "getAllUsers"
+        case AddUser = "addUser"
+        case GetRoles = "getAllRoles"
+        case GetAllClassDetailsByCityAndCourse = "getAllClassDetailsByCityAndCourse"
+        case GetSetupData = "getSetupData"
+        case GetInstituteDetails = "getInstituteDetails"
+        case SignUp = "userSingup"
+        
     }
+    
+    enum SlideMenuItem : Int{
+        
+        case HOME = 0
+        case INSTITUTES = 1
+        case COURSES = 2
+               
+    }
+
   
 }
 

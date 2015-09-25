@@ -53,7 +53,7 @@ class DefaultContainerTableViewController: BaseTableTableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
         
         var titleLable : UILabel = cell.contentView.viewWithTag(1000) as! UILabel
-        var imageView : UIImageView = cell.contentView.viewWithTag(1001) as! UIImageView
+        var imageView : UIImageView = cell.contentView.viewWithTag(1001)as! UIImageView
 
         switch indexPath.section {
            
@@ -150,7 +150,7 @@ class DefaultContainerTableViewController: BaseTableTableViewController {
     // MARK: - Button Clicks
     func refresh(sender:AnyObject){
     
-        var sessionId:NSString = GlobalVariables.globalUserDefaults.valueForKey(GlobalVariables.user_defaults_session_id_key) as! NSString
+        var sessionId:NSString = GlobalVariables.globalUserDefaults.valueForKey(GlobalVariables.user_defaults_session_id_key)as! NSString
         let jsonString:NSString = "{\"sessionId\":\"\(sessionId)\"}"
         
         

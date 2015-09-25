@@ -14,6 +14,8 @@ class GlobalSingleton {
         
         static var instance: GlobalSingleton?
         static var token: dispatch_once_t = 0
+        static var selectedCity = ""
+        static var selectedCourse = ""
     }
 
     class var sharedInstance: GlobalSingleton {
@@ -36,7 +38,6 @@ class GlobalSingleton {
             }
         }
         
-        GlobalSettings.increaseAppIterationNumber()
         return Static.instance!
     }
     

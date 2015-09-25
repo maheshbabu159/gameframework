@@ -7,14 +7,21 @@
 //
 
 import UIKit
+import AFNetworking
+import MBProgressHUD
+import MaterialKit
 
-class ForgotPasswordViewController: UIViewController {
+class ForgotPasswordViewController: UIViewController  {
+    
+    
     var delegate: CenterViewControllerDelegate?
+    @IBOutlet weak var Enteremail: MKTextField!
+    
     enum ControlTags: Int {
         
         // enumeration definition goes here
-        case kUsernameTextFiledTag = 1000
-        case kEmailTextFiledTag = 1001
+       // case kUsernameTextFiledTag = 1000
+        case kEmailTextFiledTag = 1003
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,42 +54,88 @@ class ForgotPasswordViewController: UIViewController {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 
-    @IBAction func forgotPasswordButtonClick(sender: AnyObject) {
+    @IBAction func submitButtonClick(sender: AnyObject) {
         
+        let emailTextFiled:MKTextField = self.view.viewWithTag(1003) as! MKTextField
         
-        let usernameTextField : UITextField = self.view.viewWithTag(Int(ControlTags.kUsernameTextFiledTag.rawValue)) as! UITextField
-        let emailTextField : UITextField = self.view.viewWithTag(Int(ControlTags.kEmailTextFiledTag.rawValue)) as! UITextField
-        
-        if(usernameTextField.text == ""||usernameTextField.text == nil){
+        if(emailTextFiled.text == ""){
             
-            let alertController = UIAlertController(title:"Executive Dashboard", message:"Please enter Username."
-                , preferredStyle: UIAlertControllerStyle.Alert)
+             var alert = UIAlertController(title:GlobalVariables.appName, message: "Please enter email id.", preferredStyle: UIAlertControllerStyle.Alert)
+             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil))
+             self.presentViewController(alert, animated: true, completion: nil)
             
-            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default,handler: nil))
-            
-            self.presentViewController(alertController, animated: true, completion: nil)
-            
-        }else if(emailTextField.text == ""||emailTextField.text == nil){
-            
-            let alertController = UIAlertController(title:"Executive Dashboard", message:"Please enter email."
-                , preferredStyle: UIAlertControllerStyle.Alert)
-            
-            alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default,handler: nil))
-            
-            self.presentViewController(alertController, animated: true, completion: nil)
-            
-        }else{
-            
-            
-            var aPersonDictionary = [ "username":"\(usernameTextField.text)", "email":"\(emailTextField.text)"]
-            var bytes = NSJSONSerialization.dataWithJSONObject(aPersonDictionary, options: NSJSONWritingOptions.allZeros, error: nil)
-            let resstr = NSString(data:bytes!, encoding: NSUTF8StringEncoding)
-            
-            NetworkManager.forgotPasswordDataServiceCall(GlobalVariables.RequestAPIMethods.ForgotPassword.rawValue, bodyData: resstr!, viewController: self)
-        }
+            }else{
+                    
+                    resetpassword()
+                }
     }
 
+    
+    func resetpassword(){
+        
+        
+        let emailTextFiled:MKTextField = self.view.viewWithTag(1003) as! MKTextField
+
+        let params = ["email": "\(emailTextFiled.text)","method":"\(GlobalVariables.RequestAPIMethods.ResetPassword.rawValue as String)"]
+        
+        let manager = NetworkManager.initAFNetworkManager()
+        
+        //Show the progress bard
+        let progressHUD = MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        progressHUD.labelText = "Loading..."
+        
+        
+        manager.POST(GlobalVariables.request_url ,parameters: params,
+            
+            success: {(operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
+                
+                //Hide progress bar
+                progressHUD.hide(true)
+                println(responseObject.description)
+                
+                let jsonDictionary = responseObject as! Dictionary<String, AnyObject>
+                
+                //return (true, rootDictionary)
+                
+                if let resultString:NSString = jsonDictionary["result"] as? NSString {
+                    
+                    println(resultString)
+                    
+                    if(resultString.isEqualToString("Password send to email.")){
+                        
+                        //self.performSegueWithIdentifier("AccountLoginViewController", sender: self)
+                        
+                        //self.navigationController?.popViewControllerAnimated(true)
+                        
+                        if let navController = self.navigationController {
+                            navController.popViewControllerAnimated(true)
+                            
+                        }
+                        
+                    }
+                    
+                }
+                
+            },
+            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
+                
+                
+                //Hide progress bar
+                progressHUD.hide(true)
+                
+                let alertController = UIAlertController(title:"Executive Dashboard", message:error.description
+                    , preferredStyle: UIAlertControllerStyle.Alert)
+                
+                alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default,handler: nil))
+                
+                self.presentViewController(alertController, animated: true, completion: nil)
+            }
+        )
+        
+        }
+
 }
+
 extension ForgotPasswordViewController : UITextFieldDelegate  {
     
     // MARK: - Textfiled delegate methods

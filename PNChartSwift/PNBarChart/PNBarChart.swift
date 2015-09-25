@@ -372,9 +372,9 @@ public class PNBarChart: UIView {
         
     }
     
-    public override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+    public override func touchesBegan(touches:  Set<NSObject>, withEvent event: UIEvent) {
         touchPoint(touches, withEvent: event)
-        super.touchesBegan(touches as Set<NSObject>, withEvent: event)
+        super.touchesBegan(touches as NSSet as Set<NSObject>, withEvent: event)
     }
     
     

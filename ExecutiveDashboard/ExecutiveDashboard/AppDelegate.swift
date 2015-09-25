@@ -9,12 +9,15 @@
 import UIKit
 import MagicalRecord
 import AFNetworking
+import MBProgressHUD
+import MaterialKit
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
 
     var window: UIWindow?
-    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
@@ -30,9 +33,133 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Initialize global singleton
         GlobalSingleton.sharedInstance
+        
+        let appItertationNumber = GlobalVariables.globalUserDefaults.integerForKey(GlobalVariables.user_defaults_app_iteration_number_key)
+        
+        
+        let frame = UIScreen.mainScreen().bounds
+        window = UIWindow(frame: frame)
+
+        
+        //If the is running first time set the default values
+        if(appItertationNumber==0){
+            
+           
+           getSetupDataServiceCall()
+               
+                        
+        }else{
+            
+            
+            //Navigate to slider view of dashboard
+            /*let containerViewController = ContainerViewController()
+            let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            appDelegate.window?.rootViewController = containerViewController*/
+            
+            var cityId:String = GlobalVariables.globalUserDefaults.valueForKey(GlobalVariables.user_defaults_city_id_key) as! String
+            
+            var courseId:String = GlobalVariables.globalUserDefaults.valueForKey(GlobalVariables.user_defaults_course_id_key)as! String
+
+            if(cityId == "" || courseId == ""){
+              
+                //Navigate to slider view of dashboard
+                let containerViewController = ContainerViewController()
+                let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                containerViewController.selectedIndex = 0
+
+                if let window = self.window{
+                    
+                    window.rootViewController = containerViewController
+                    window.makeKeyAndVisible()
+                }
+                
+            }else{
+                
+                //Navigate to slider view of dashboard
+                let containerViewController = ContainerViewController()
+                containerViewController.selectedIndex = 1
+                let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                
+                if let window = self.window{
+                    
+                    window.rootViewController = containerViewController
+                    window.makeKeyAndVisible()
+                }
+            }
+            
+            
+
+            
+        }
+
+        //Increase iteration number
+        GlobalSettings.increaseAppIterationNumber()
+
 
         return true
     }
+    
+    func getSetupDataServiceCall(){
+        
+        
+        let manager = NetworkManager.initAFNetworkManager()
+        
+        let params = ["method":"\(GlobalVariables.RequestAPIMethods.GetSetupData.rawValue as String)"]
+        
+        //Show the progress bard
+        let progressHUD = MBProgressHUD.showHUDAddedTo(self.window, animated: true)
+        
+        progressHUD.labelText = "Loading..."
+        
+        
+        manager.POST(GlobalVariables.request_url ,parameters: params,
+            
+            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
+                
+                //Hide progress bar
+                progressHUD.hide(true)
+                println(responseObject.description)
+                
+                
+                let jsonDictionary = responseObject as! Dictionary<String, AnyObject>
+                
+                SetupDataModel.initWithDictionary(jsonDictionary)
+
+                
+                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                var introductionViewController:IntroductionViewController = mainStoryboard.instantiateViewControllerWithIdentifier("IntroductionViewController") as! IntroductionViewController
+                
+                if let window = self.window{
+                    
+                    window.rootViewController = introductionViewController
+                    window.makeKeyAndVisible()
+                }
+
+                
+                
+            },
+            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
+                
+                
+                //Hide progress bar
+                progressHUD.hide(true)
+                
+                let alertController = UIAlertController(title:"Executive Dashboard", message:error.description
+                    , preferredStyle: UIAlertControllerStyle.Alert)
+                
+                alertController.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default,handler: nil))
+                
+              
+                self.window?.rootViewController?.presentViewController(alertController, animated: true, completion: nil)
+              
+            }
+            
+        )
+    
+    }
+    
+
+    
     func setupMagicalRecord(){
         
         MagicalRecord.enableShorthandMethods()
@@ -40,6 +167,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Setup MagicalRecord as per usual
         MagicalRecord.setupCoreDataStack()
     }
+    
+    
     
    
     func applicationWillResignActive(application: UIApplication) {
@@ -63,6 +192,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+
 
 
 }

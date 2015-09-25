@@ -25,7 +25,7 @@ class SidePanelViewController: UIViewController {
     var detailsViewDelegate: DetailsViewControllerDelegate?
     var containerViewDelegate: ContainerViewControllerDelegate?
 
-    var animals: Array<MenuItem>!
+    var menuItemsArray: Array<MenuItem>!
     
     struct TableView {
         
@@ -49,29 +49,35 @@ class SidePanelViewController: UIViewController {
     }
     func setProfileDetails(){
         
-        let profilesArray:NSArray = ProfileModel.getAllProfileObjects()
+        let profileView:UIView = self.tableView.viewWithTag(5000) as UIView!
+        //profileView.backgroundColor = UIColor.darkGrayColor()
+        profileView.layer.borderWidth = 2
+        profileView.layer.borderColor = GlobalSettings.RGBColor(GlobalVariables.yellow_color).CGColor
+        
+        
+        let profileNameLable:UILabel = profileView.viewWithTag(5010) as! UILabel!
+        let profileImageView:UIImageView = profileView.viewWithTag(5011) as! UIImageView!
+        
+        profileImageView.clipsToBounds = true;
+        profileImageView.layer.cornerRadius = 30;
 
-        if let profile:Profile = profilesArray[0] as? Profile{
+        
+        let profilesArray:NSArray = ProfileModel.getAllProfileObjects()
+        let count = profilesArray.count
+        
+        if count > 0 {
             
-            let profileView:UIView = self.tableView.viewWithTag(5000) as UIView!
-            //profileView.backgroundColor = UIColor.darkGrayColor()
-            profileView.layer.borderWidth = 2
-            profileView.layer.borderColor = GlobalSettings.RGBColor(GlobalVariables.yellow_color).CGColor
-            
-            
-            
-            let profileNameLable:UILabel = profileView.viewWithTag(5010) as! UILabel!
-            let profileImageView:UIImageView = profileView.viewWithTag(5011) as! UIImageView!
-           
-            profileImageView.clipsToBounds = true;
-            profileImageView.layer.cornerRadius = 30;
-            profileNameLable.text = profile.firstname;
-            
-            let url = NSURL(string: profile.photo_url)
-            let data = NSData(contentsOfURL: url!)
-           
-            profileImageView.image =  UIImage(data: data!)
+            if let profile:Profile = profilesArray[0] as? Profile{
+                
+                profileNameLable.text = profile.firstname;
+                
+                let url = NSURL(string: profile.photo_url)
+                let data = NSData(contentsOfURL: url!)
+                
+                profileImageView.image =  UIImage(data: data!)
+            }
         }
+        
     }
     @IBAction func logoutButtonClick(sender: AnyObject) {
         
@@ -98,13 +104,16 @@ extension SidePanelViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return animals.count
+        return menuItemsArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(TableView.CellIdentifiers.AnimalCell, forIndexPath: indexPath) as! AnimalCell
-        cell.configureForAnimal(animals[indexPath.row])
+        let cell = tableView.dequeueReusableCellWithIdentifier(TableView.CellIdentifiers.AnimalCell, forIndexPath: indexPath)as! AnimalCell
+        tableView.backgroundColor = UIColor.clearColor()
+        cell.backgroundColor = UIColor.clearColor()
+        cell.contentView.backgroundColor = UIColor.clearColor()
+        cell.configureForAnimal(menuItemsArray[indexPath.row])
         return cell
     }
     

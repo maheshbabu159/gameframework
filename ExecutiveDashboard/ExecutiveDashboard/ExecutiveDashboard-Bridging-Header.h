@@ -9,8 +9,8 @@
 #ifndef GameFramework_GameFramework_Bridging_Header_h
 #define GameFramework_GameFramework_Bridging_Header_h
 
-#import <AFNetworking/AFNetworking.h>
-#import <MBProgressHUD/MBProgressHUD.h>
+//#import <AFNetworking/AFNetworking.h>
+//#import <MBProgressHUD/MBProgressHUD.h>
 #define MR_SHORTHAND
 #import <MagicalRecord/MagicalRecord.h>
 #import <MagicalRecord/MagicalRecord+ShorthandMethods.h>

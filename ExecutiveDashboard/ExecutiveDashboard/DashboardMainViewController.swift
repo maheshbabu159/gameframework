@@ -13,6 +13,7 @@ protocol CenterViewControllerDelegate {
     
     optional func toggleLeftPanel()
     optional func collapseSidePanels()
+    optional func replaceViewController(row:NSInteger)
 }
 
 class DashboardMainViewController: BaseViewController {

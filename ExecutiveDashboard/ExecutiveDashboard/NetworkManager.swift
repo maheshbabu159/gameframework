@@ -18,7 +18,7 @@ class NetworkManager: NSObject {
         
         // initialize manager
         let manager = AFHTTPRequestOperationManager()
-        manager.requestSerializer = AFJSONRequestSerializer()
+        manager.requestSerializer = AFJSONRequestSerializer() as AFJSONRequestSerializer
         
         // set headers
         manager.requestSerializer.setValue(GlobalVariables.request_content_type_value, forHTTPHeaderField: GlobalVariables.request_content_type_key)

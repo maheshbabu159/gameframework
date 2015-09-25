@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14B25" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7701" systemVersion="14E46" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="ClassDetails" representedClassName="PRODUCT_MODULE_NAME.Classdetails" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="class_name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="classType" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="course" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="createdAt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="instituteDetail" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="objectId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="trainerDetail" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="InstituteDetails" representedClassName="PRODUCT_MODULE_NAME.InstituteDetails" syncable="YES">
+        <attribute name="classDetailsArray" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="commentsArray" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="instituteDetailsDictionary" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="trainersArray" optional="YES" attributeType="Transformable" syncable="YES"/>
+    </entity>
     <entity name="Profile" representedClassName="Profile" syncable="YES">
         <attribute name="active" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
@@ -49,6 +66,26 @@
         <attribute name="updatedAt" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="year" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="SetupData" representedClassName="SetupData" syncable="YES">
+        <attribute name="cities" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="classTypes" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="courseCategories" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="courses" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="roles" optional="YES" attributeType="Transformable" syncable="YES"/>
+    </entity>
+    <entity name="User" syncable="YES">
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="emailVerified" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="objectId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phoneNumber" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="roleId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="updatedAt" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <entity name="WebsiteVisit" representedClassName="WebsiteVisit" syncable="YES">
         <attribute name="class_name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="count" optional="YES" attributeType="String" syncable="YES"/>
@@ -60,9 +97,13 @@
         <attribute name="year" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
+        <element name="ClassDetails" positionX="27" positionY="333" width="128" height="180"/>
         <element name="Profile" positionX="9" positionY="180" width="128" height="465"/>
         <element name="Project" positionX="27" positionY="198" width="128" height="148"/>
         <element name="Revenue" positionX="36" positionY="207" width="128" height="163"/>
+        <element name="SetupData" positionX="27" positionY="333" width="128" height="120"/>
+        <element name="User" positionX="27" positionY="333" width="128" height="210"/>
         <element name="WebsiteVisit" positionX="45" positionY="216" width="128" height="163"/>
+        <element name="InstituteDetails" positionX="36" positionY="342" width="128" height="105"/>
     </elements>
 </model>

@@ -32,7 +32,17 @@ class GlobalSettings {
         GlobalVariables.globalUserDefaults.setValue("", forKey: GlobalVariables.user_defaults_username_key)
     
         GlobalVariables.globalUserDefaults.setValue("", forKey: GlobalVariables.user_defaults_password_key)
+        
+        GlobalVariables.globalUserDefaults.setValue("", forKey: GlobalVariables.user_defaults_city_id_key)
+        
+        GlobalVariables.globalUserDefaults.setValue("", forKey: GlobalVariables.user_defaults_course_id_key)
+        
+        GlobalVariables.globalUserDefaults.setValue("", forKey: GlobalVariables.user_defaults_user_id_key)
+        
+        GlobalVariables.globalUserDefaults.setValue("", forKey: GlobalVariables.user_defaults_role_id_key)
+        
 
+        
         NSUserDefaults.standardUserDefaults().synchronize()
         
         
@@ -52,6 +62,16 @@ class GlobalSettings {
     class func udateSessionId(value:NSString){
         
         GlobalVariables.globalUserDefaults.setValue(value, forKey: GlobalVariables.user_defaults_session_id_key)
+        
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+    }
+    
+
+    class func updateRoleIdDefaultValue(value : NSString){
+        
+        
+        GlobalVariables.globalUserDefaults.setValue(value, forKey: GlobalVariables.user_defaults_role_id_key)
         
         NSUserDefaults.standardUserDefaults().synchronize()
         
@@ -110,6 +130,34 @@ class GlobalSettings {
         
     }
     
+    class func updateCityDefaultValue(value : NSString){
+        
+        
+        GlobalVariables.globalUserDefaults.setValue(value, forKey: GlobalVariables.user_defaults_city_id_key)
+        
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+    }
+    
+    class func updateCourseDefaultValue(value : NSString){
+        
+        
+        GlobalVariables.globalUserDefaults.setValue(value, forKey: GlobalVariables.user_defaults_course_id_key)
+        
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+    }
+    
+    
+    class func updateUserIdDefaultValue(value : NSString){
+        
+        
+        GlobalVariables.globalUserDefaults.setValue(value, forKey: GlobalVariables.user_defaults_user_id_key)
+        
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+    }
+
     class func updateFromYearDefaultValue(value : Int){
         
         
@@ -150,6 +198,7 @@ class GlobalSettings {
         NSUserDefaults.standardUserDefaults().synchronize()
         
     }
+    
     class func getNewTournmentId()-> Int{
         
         var currentValue = GlobalVariables.globalUserDefaults.integerForKey(GlobalVariables.user_defaults_tournment_id_key)
@@ -189,7 +238,13 @@ class GlobalSettings {
             
             if scanner.scanHexLongLong(&hexValue)
             {
-                if count(hex) == 6
+                
+                
+                red   = CGFloat((hexValue & 0xFF0000) >> 16) / 255.0
+                green = CGFloat((hexValue & 0x00FF00) >> 8)  / 255.0
+                blue  = CGFloat(hexValue & 0x0000FF) / 255.0
+                
+                /*if count(hex) == 6
                 {
                     red   = CGFloat((hexValue & 0xFF0000) >> 16) / 255.0
                     green = CGFloat((hexValue & 0x00FF00) >> 8)  / 255.0
@@ -205,7 +260,7 @@ class GlobalSettings {
                 else
                 {
                     print("invalid hex code string, length should be 7 or 9")
-                }
+                }*/
             }
             else
             {

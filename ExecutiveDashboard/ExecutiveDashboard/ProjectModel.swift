@@ -58,14 +58,11 @@ class ProjectModel: Project {
                     
                     object.updatedAt = updatedAt as String;
                     
-                    
                 }
 
                 
             }
-            
            
-
         }
         //Save changes to database
         NSManagedObjectContext.MR_defaultContext().MR_saveToPersistentStoreAndWait()

@@ -73,7 +73,7 @@ public class PNLineChart: UIView{
                 (layer as! CALayer).removeFromSuperlayer()
             }
             for layer : AnyObject in chartPointArray {
-                (layer as! CALayer).removeFromSuperlayer()
+                //(layeras!s CALayer).removeFromSuperlayer()
             }
             
             chartLineArray = NSMutableArray(capacity: chartData.count)
@@ -209,7 +209,7 @@ public class PNLineChart: UIView{
         touchKeyPoint(touches, withEvent: event)
     }
     
-    override public func touchesMoved(touches: Set<NSObject>, withEvent event: UIEvent) {
+    override public func touchesMoved(touches:  Set<NSObject>, withEvent event: UIEvent) {
 
         touchPoint(touches, withEvent: event)
         touchKeyPoint(touches, withEvent: event)
@@ -264,7 +264,7 @@ public class PNLineChart: UIView{
             var linePointsArray: NSArray = pathPoints as NSArray
             
             for var i:NSInteger = 0; i < (linePointsArray.count - 1); i += 1{
-                var p1:CGPoint = (linePointsArray[i] as! PNValue).point
+                var p1:CGPoint = (linePointsArray[i]as! PNValue).point
                 var p2:CGPoint = (linePointsArray[i+1] as! PNValue).point
                 
                 var distanceToP1: CGFloat = fabs( CGFloat( hypot( touchPoint.x - p1.x , touchPoint.y - p1.y ) ))

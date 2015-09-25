@@ -18,9 +18,13 @@ enum SlideOutState {
 
 enum DetailsViewController {
     
-    case DashboardViewController
-    case ProfileViewController
+    case MainSearchViewController
+    case InstitutesTableViewController
+    case CoursesTableViewController
+    case AccountViewController
     case SettingsViewController
+    case HelpTableViewController
+    
 }
 
 
@@ -29,6 +33,7 @@ enum DetailsViewController {
 class ContainerViewController: UIViewController {
     
     var centerNavigationController: UINavigationController!
+    var selectedIndex = 0
     
     var currentState: SlideOutState = .BothCollapsed {
         
@@ -47,7 +52,33 @@ class ContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addDetailsViewContoller(DetailsViewController.DashboardViewController)
+        
+        if(selectedIndex == 0){
+            
+            addDetailsViewContoller(DetailsViewController.MainSearchViewController)
+
+        }else if(selectedIndex == 1){
+            
+            addDetailsViewContoller(DetailsViewController.InstitutesTableViewController)
+
+            
+        }else if(selectedIndex == 2){
+            
+            addDetailsViewContoller(DetailsViewController.CoursesTableViewController)
+            
+        }else if(selectedIndex == 3){
+            
+            addDetailsViewContoller(DetailsViewController.AccountViewController)
+            
+        }else if(selectedIndex == 4){
+            
+            addDetailsViewContoller(DetailsViewController.SettingsViewController)
+            
+        }else {
+            
+            addDetailsViewContoller(DetailsViewController.HelpTableViewController)
+            
+        }
     }
     
     
@@ -62,9 +93,23 @@ class ContainerViewController: UIViewController {
         
         switch(viewControllerEnumValue){
             
-        case .DashboardViewController:
+        case .MainSearchViewController:
             
-            var detailsViewController:DashboardMainViewController = UIStoryboard.dashboardMainViewController()!
+            var mainSearchViewController:MainSearchViewController = UIStoryboard.mainSearchViewController()!
+            mainSearchViewController.delegate = self
+            
+            // wrap the centerViewController in a navigation controller, so we can push views to it
+            // and display bar button items in the navigation bar
+            centerNavigationController = UINavigationController(rootViewController: mainSearchViewController)
+            view.addSubview(centerNavigationController.view)
+            addChildViewController(centerNavigationController)
+            
+            centerNavigationController.didMoveToParentViewController(self)
+            
+           
+        case .InstitutesTableViewController:
+            
+            var detailsViewController:InstitutesTableViewController = UIStoryboard.institutesTableViewController()!
             detailsViewController.delegate = self
             
             // wrap the centerViewController in a navigation controller, so we can push views to it
@@ -73,31 +118,43 @@ class ContainerViewController: UIViewController {
             view.addSubview(centerNavigationController.view)
             addChildViewController(centerNavigationController)
             
+            
             centerNavigationController.didMoveToParentViewController(self)
             
-            let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "handlePanGesture:")
-            centerNavigationController.view.addGestureRecognizer(panGestureRecognizer)
-      
-        case .ProfileViewController:
             
-            var detailsViewController:ProfileTableViewController = UIStoryboard.profileTableViewController()!
-            detailsViewController.delegate = self
+        case .CoursesTableViewController:
+            
+            var coursesTableViewController:CoursesTableViewController = UIStoryboard.coursesTableViewController()!
+            coursesTableViewController.delegate = self
             
             // wrap the centerViewController in a navigation controller, so we can push views to it
             // and display bar button items in the navigation bar
-            centerNavigationController = UINavigationController(rootViewController: detailsViewController)
+            centerNavigationController = UINavigationController(rootViewController: coursesTableViewController)
             view.addSubview(centerNavigationController.view)
             addChildViewController(centerNavigationController)
             
             
             centerNavigationController.didMoveToParentViewController(self)
             
-            let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "handlePanGesture:")
-            centerNavigationController.view.addGestureRecognizer(panGestureRecognizer)
+           
+            
+        case .AccountViewController:
+            
+            var accountViewController:AccountViewController = UIStoryboard.accountViewController()!
+            accountViewController.delegate = self
+            
+            // wrap the centerViewController in a navigation controller, so we can push views to it
+            // and display bar button items in the navigation bar
+            centerNavigationController = UINavigationController(rootViewController: accountViewController)
+            view.addSubview(centerNavigationController.view)
+            addChildViewController(centerNavigationController)
+            
+            centerNavigationController.didMoveToParentViewController(self)
+            
     
         case .SettingsViewController:
             
-            var detailsViewController:ChangePasswordViewController = UIStoryboard.settingsTableViewController()!
+            var detailsViewController:SettingsTableViewController = UIStoryboard.settingsTableViewController()!
             detailsViewController.delegate = self
             
             // wrap the centerViewController in a navigation controller, so we can push views to it
@@ -108,8 +165,23 @@ class ContainerViewController: UIViewController {
             
             centerNavigationController.didMoveToParentViewController(self)
             
-            let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: "handlePanGesture:")
-            centerNavigationController.view.addGestureRecognizer(panGestureRecognizer)
+            
+            
+        case .HelpTableViewController:
+            
+            var helpTableViewController:HelpTableViewController = UIStoryboard.helpTableViewController()!
+            helpTableViewController.delegate = self
+            
+            // wrap the centerViewController in a navigation controller, so we can push views to it
+            // and display bar button items in the navigation bar
+            centerNavigationController = UINavigationController(rootViewController: helpTableViewController)
+            view.addSubview(centerNavigationController.view)
+            addChildViewController(centerNavigationController)
+            
+            
+            centerNavigationController.didMoveToParentViewController(self)
+            
+            
 
         default:
             break
@@ -153,7 +225,7 @@ extension ContainerViewController: CenterViewControllerDelegate {
             
             menuSliderViewController = UIStoryboard.menuSliderViewController()
             
-            menuSliderViewController!.animals = MenuItem.getAllMenuItems()
+            menuSliderViewController!.menuItemsArray = MenuItem.getAllMenuItems()
             
             addChildSidePanelController(menuSliderViewController!)
             
@@ -211,6 +283,27 @@ extension ContainerViewController: CenterViewControllerDelegate {
             centerNavigationController.view.layer.shadowOpacity = 0.0
         }
     }
+    func replaceViewController(row:NSInteger){
+        
+        self.currentState = .BothCollapsed
+        
+        centerNavigationController.removeFromParentViewController()
+        
+        if(row == 0){
+            
+            addDetailsViewContoller(DetailsViewController.MainSearchViewController)
+            
+        }else if(row == 1){
+            
+            addDetailsViewContoller(DetailsViewController.InstitutesTableViewController)
+            
+        }else{
+            
+            addDetailsViewContoller(DetailsViewController.SettingsViewController)
+            
+        }
+        
+    }
     
 }
 
@@ -251,7 +344,7 @@ extension ContainerViewController: UIGestureRecognizerDelegate {
         }
     }
 }
- extension ContainerViewController: ContainerViewControllerDelegate {
+extension ContainerViewController: ContainerViewControllerDelegate {
     
     func replaceDetailsViewController(row:NSInteger){
     
@@ -261,23 +354,35 @@ extension ContainerViewController: UIGestureRecognizerDelegate {
         
         if(row == 0){
             
-            addDetailsViewContoller(DetailsViewController.DashboardViewController)
+            addDetailsViewContoller(DetailsViewController.MainSearchViewController)
 
         }else if(row == 1){
             
-            addDetailsViewContoller(DetailsViewController.ProfileViewController)
-
-        }else{
+            addDetailsViewContoller(DetailsViewController.InstitutesTableViewController)
+            
+        }else if(row == 2){
+            
+            addDetailsViewContoller(DetailsViewController.CoursesTableViewController)
+            
+        }else if(row == 3){
+            
+            addDetailsViewContoller(DetailsViewController.AccountViewController)
+            
+        }else if(row == 4){
             
             addDetailsViewContoller(DetailsViewController.SettingsViewController)
-
+            
+        }else{
+            
+            addDetailsViewContoller(DetailsViewController.HelpTableViewController)
+            
         }
         
     }
     
 }
-private extension UIStoryboard
-{
+private extension UIStoryboard{
+    
     class func mainStoryboard() -> UIStoryboard {
     
         return UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
@@ -289,20 +394,39 @@ private extension UIStoryboard
         
     }
     
-    class func dashboardMainViewController() -> DashboardMainViewController? {
+    class func mainSearchViewController() -> MainSearchViewController? {
         
-        return mainStoryboard().instantiateViewControllerWithIdentifier("DashboardMainViewController") as? DashboardMainViewController
-        
-    }
-    class func settingsTableViewController() -> ChangePasswordViewController? {
-        
-        return mainStoryboard().instantiateViewControllerWithIdentifier("ChangePasswordViewController") as? ChangePasswordViewController
+        return mainStoryboard().instantiateViewControllerWithIdentifier("MainSearchViewController") as? MainSearchViewController
         
     }
-    class func profileTableViewController() -> ProfileTableViewController? {
+    
+    class func institutesTableViewController() -> InstitutesTableViewController? {
         
-        return mainStoryboard().instantiateViewControllerWithIdentifier("ProfileTableViewController") as? ProfileTableViewController
+        return mainStoryboard().instantiateViewControllerWithIdentifier("InstitutesTableViewController") as? InstitutesTableViewController
         
     }
+    class func coursesTableViewController() -> CoursesTableViewController? {
+        
+        return mainStoryboard().instantiateViewControllerWithIdentifier("CoursesTableViewController") as? CoursesTableViewController
+        
+    }
+    class func accountViewController() -> AccountViewController? {
+        
+        return mainStoryboard().instantiateViewControllerWithIdentifier("AccountViewController") as? AccountViewController
+        
+    }
+    
+    class func settingsTableViewController() -> SettingsTableViewController? {
+        
+        return mainStoryboard().instantiateViewControllerWithIdentifier("SettingsTableViewController") as? SettingsTableViewController
+        
+    }
+
+    class func helpTableViewController() -> HelpTableViewController? {
+        
+        return mainStoryboard().instantiateViewControllerWithIdentifier("HelpTableViewController") as? HelpTableViewController
+        
+    }
+
     
 }

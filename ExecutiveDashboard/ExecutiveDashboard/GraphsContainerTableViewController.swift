@@ -305,7 +305,7 @@ class GraphsContainerTableViewController: BaseTableTableViewController {
     // MARK: - Button Clicks
     func refresh(sender:AnyObject){
         
-        var sessionId:NSString = GlobalVariables.globalUserDefaults.valueForKey(GlobalVariables.user_defaults_session_id_key) as! NSString
+        var sessionId:NSString = GlobalVariables.globalUserDefaults.valueForKey(GlobalVariables.user_defaults_session_id_key)as! NSString
         let jsonString:NSString = "{\"sessionId\":\"\(sessionId)\"}"
         
         

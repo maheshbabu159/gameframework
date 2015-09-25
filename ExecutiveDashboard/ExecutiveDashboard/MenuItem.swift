@@ -16,15 +16,22 @@ class MenuItem {
   let image: UIImage?
   
   init(title: String, creator: String, image: UIImage?) {
+    
     self.title = title
     self.creator = creator
     self.image = image
+    
   }
   
   class func getAllMenuItems() -> Array<MenuItem> {
-    return [ MenuItem(title: "Dashboard", creator: "papaija2008", image: UIImage(named: "dashboard.png")),
-      MenuItem(title: "Profile", creator: "Carlos Porto", image: UIImage(named: "profile.png")),
-      MenuItem(title: "Settings", creator: "aopsan", image: UIImage(named: "settings.png"))]
+    
+    return [ MenuItem(title: "Address", creator: "address", image: UIImage(named: "address.png")),
+        MenuItem(title: "Institutes", creator: "institutes", image: UIImage(named: "institutes.png")),
+        MenuItem(title: "Courses", creator: "courses", image: UIImage(named: "course.png")),
+        MenuItem(title: "Account", creator: "account", image: UIImage(named: "account.png")),
+        MenuItem(title: "Settings", creator: "settings", image: UIImage(named: "settings.png")),
+        MenuItem(title: "Help", creator: "help", image: UIImage(named: "help.png"))]
+    
   }
   
 }
